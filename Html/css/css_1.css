@@ -1,3 +1,10 @@
 body{
 font-family: MicroSoft YaHei;
 }
+
+.test1{
+  min-height: 300px;
+  min-width: 300px;
+  
+  border: 1px solid;
+}

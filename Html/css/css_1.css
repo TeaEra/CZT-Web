@@ -4,7 +4,7 @@ body{
 }
 
 .test1{
-  min-height: 300px;
+  min-height: 1000px;
   min-width: 300px;
   
   border: 1px solid;
@@ -12,10 +12,6 @@ body{
 
 .c_navbar_fixed{
   position: fixed;
-  top: 0px;
-  left: 0px;
-  padding: .2em 1em;
-  border-width: 3px;
 }
 
 .c_navbar_fixed ul{

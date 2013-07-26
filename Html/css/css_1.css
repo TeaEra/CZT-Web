@@ -1,11 +1,12 @@
 body{
   font-family: MicroSoft YaHei;
   padding-top: 60px;
+  width: 960px;
 }
 
 .test1{
   min-height: 1000px;
-  min-width: 300px;
+  width: 100%;
   
   border: 1px solid;
 }

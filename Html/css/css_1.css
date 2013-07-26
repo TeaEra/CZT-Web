@@ -8,3 +8,10 @@ font-family: MicroSoft YaHei;
   
   border: 1px solid;
 }
+
+.c_navbar_fixed{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  padding: 10px;
+}

@@ -20,7 +20,7 @@ body{
 .c_navbar_fixed ul{
   float: left;
   position: relative;
-  padding: 0;
+  top: 0;
 }
 
 .c_navbar_fixed li{

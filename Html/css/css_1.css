@@ -12,8 +12,8 @@ body{
 
 .c_navbar_fixed{
   position: fixed;
-  top: 0px;
-  left: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .c_navbar_fixed ul{

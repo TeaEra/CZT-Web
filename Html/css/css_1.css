@@ -29,3 +29,10 @@ body{
   float: left;
   list-style-type: none;
 }
+
+.c_navbar_fixed a{
+  display: block;
+  text-decoration: none;
+  border: 3px;
+  border-color: transparent;
+}

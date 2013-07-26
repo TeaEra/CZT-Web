@@ -19,3 +19,9 @@ font-family: MicroSoft YaHei;
 .c_navbar_fixed ul{
   float: left;
 }
+
+.c_navbar_fixed li{
+  float: left;
+  list-style-type: none;
+  position: relative;
+}

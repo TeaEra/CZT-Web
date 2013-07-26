@@ -1,6 +1,7 @@
 body{
   font-family: MicroSoft YaHei;
   padding-top: 60px;
+  position: relative;
   left: 50%;
   width: 960px;
   margin-left: -480px;

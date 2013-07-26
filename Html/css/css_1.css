@@ -23,12 +23,9 @@ body{
 
 .c_navbar_fixed ul{
   float: left;
-  position: relative;
-  top: 0;
 }
 
 .c_navbar_fixed li{
   float: left;
   list-style-type: none;
-  position: relative;
 }

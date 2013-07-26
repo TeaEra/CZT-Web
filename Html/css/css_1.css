@@ -15,3 +15,7 @@ font-family: MicroSoft YaHei;
   left: 0px;
   padding: 10px;
 }
+
+.c_navbar_fixed ul{
+  float: left;
+}

@@ -14,11 +14,11 @@ body{
   position: fixed;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .c_navbar_fixed ul{
   float: left;
-  position: relative;
 }
 
 .c_navbar_fixed li{

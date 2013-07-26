@@ -18,6 +18,7 @@ body{
 
 .c_navbar_fixed ul{
   float: left;
+  position: relative;
 }
 
 .c_navbar_fixed li{

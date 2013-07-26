@@ -1,8 +1,13 @@
 body{
   font-family: MicroSoft YaHei;
   padding-top: 60px;
+}
+
+.c_body_centered{
+  position: relative;
   width: 960px;
-  text-align: center;
+  left: 50%;
+  margin-left: -480px;
 }
 
 .test1{

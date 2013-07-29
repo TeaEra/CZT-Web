@@ -1,13 +1,21 @@
+html{
+  height: 100%;
+}
+
 body{
   font-family: MicroSoft YaHei;
   padding-top: 60px;
-
-  margin: 0px;
+  margin: 0;
+  height: 100%;
 }
 
 .c_body_centered{
   position: relative;
-  width: 960px;
+  min-height: calc(100% - 60px);
+  min-height: -webkit-calc(100% - 60px);
+  min-height: -moz-calc(100% - 60px);
+  min-height: -o-calc(100% - 60px);
+  width: 950px;
   left: 50%;
   margin-left: -480px;
 
@@ -17,7 +25,7 @@ body{
 }
 
 .test1{
-  min-height: 1000px;
+  min-height: 300px;
   width: 100%;
   background-color: rgb(255, 255, 255);
 }
@@ -60,32 +68,33 @@ body{
 }
 
 .c_footer{
-  width: 960px;
-  height: 100px;
+  width: 100%;
   background-color: rgb(248, 248, 248);
-
-  /*padding-right: calc(50% - 480px);
-  padding-right: -webkit-calc(50% - 480px);
-  padding-right: -moz-calc(50% - 480px);
-  padding-right: -o-calc(50% - 480px);*/
+  min-height: 300px;
 }
 
-.c_footer #cfl{
+.c_footer_table{
   position: relative;
   left: calc(50% - 480px);
   left: -webkit-calc(50% - 480px);
   left: -moz-calc(50% - 480px);
   left: -o-calc(50% - 480px);
-  width: 560px;
-  height: inherit;
-  background-color: rgb(216, 216, 216);
+  display: table;
+  min-height: inherit;
 }
 
-.c_footer #cfr{
-  position: relative;
+.cfl{
   float: left;
-  width: 400px;
-  height: inherit;
-  background-color: rgb(168, 168, 168);
+  width: 540px;
+  min-height: inherit;
+  background-color: rgb(216, 216, 216);
+  padding: 10px;
 }
-/*Background color palette*/
+
+.cfr{
+  float: left;
+  width: 380px;
+  min-height: inherit;
+  background-color: rgb(168, 168, 168);
+  padding: 10px;
+}

@@ -9,6 +9,10 @@ body{
   height: 100%;
 }
 
+a{
+  text-decoration: none;
+}
+
 .c_body_centered{
   position: relative;
   min-height: calc(100% - 60px);
@@ -53,7 +57,6 @@ body{
 
 .c_navbar_fixed a{
   display: block;
-  text-decoration: none;
   border: 3px;
   border-color: transparent;
   padding: .2em .5em;
@@ -85,18 +88,45 @@ body{
 
 .cfl{
   float: left;
-  width: 540px;
+  width: 520px;
   min-height: inherit;
   background-color: rgb(216, 216, 216);
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
   color: rgb(168, 168, 168);
 }
 
 .cfr{
   float: left;
-  width: 380px;
+  width: 360px;
   min-height: inherit;
   background-color: rgb(168, 168, 168);
-  padding: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.c_footer_table ul{
+  margin: 0;
+  padding: 0;
+}
+
+.c_footer_table li{
+  list-style-type: none;
+  padding: 3px 0;
+}
+
+.c_footer_table a{
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 5px 25px;
+}
+
+.c_footer_table a:hover{
+  background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }

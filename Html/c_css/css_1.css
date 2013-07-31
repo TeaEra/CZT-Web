@@ -6,7 +6,8 @@ body{
   font-family: MicroSoft YaHei;
   padding-top: 60px;
   margin: 0;
-  height: 100%;
+  min-width: 960px;
+  min-height: 800px;
 }
 
 a{
@@ -15,10 +16,11 @@ a{
 
 .c_body_centered{
   position: relative;
-  min-height: calc(100% - 60px);
+  /*min-height: calc(100% - 60px);
   min-height: -webkit-calc(100% - 60px);
   min-height: -moz-calc(100% - 60px);
-  min-height: -o-calc(100% - 60px);
+  min-height: -o-calc(100% - 60px);*/
+  min-height: inherit;
   width: 950px;
   left: 50%;
   margin-left: -480px;
@@ -30,7 +32,6 @@ a{
 
 .test1{
   min-height: 300px;
-  width: 100%;
   background-color: rgb(255, 255, 255);
 }
 

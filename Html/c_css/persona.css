@@ -1,0 +1,19 @@
+.vBar{
+  min-height: inherit;
+  width: 100px;
+  background-color: rgb(128, 128, 0);
+  position: relative;
+  left: 370px; 
+}
+
+.hBar{
+  min-width: inherit;
+  height: 100px;
+  background-color: rgb(0, 128, 128);
+  position: relative;
+  bottom: 300px;
+}
+
+.personaTest1{
+  border: 1px solid;
+}

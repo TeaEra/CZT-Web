@@ -1,19 +1,66 @@
 .vBar{
   min-height: inherit;
-  width: 100px;
+  width: 130px;
   background-color: rgb(128, 128, 0);
   position: relative;
-  left: 370px; 
+  left: 276px; 
 }
 
 .hBar{
   min-width: inherit;
-  height: 100px;
-  background-color: rgb(0, 128, 128);
+  height: 130px;
   position: relative;
   bottom: 300px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: rgb(0, 128, 128);
 }
 
-.personaTest1{
-  border: 1px solid;
+.hBar_grid{
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 2px;
+  border-right: 2px;
+  border-style: solid;
+  /*border-color: transparent;*/
+  border-color: rgb(0, 128, 128);
+  float: left;
+  padding-top: 10px;
+  height: 120px;
+  padding-left: 40px;
+  width: 90px;
+  font-size: 5em;
+}
+
+.hBar_grid_curr{
+  background-color: rgb(128, 255, 128);
+}
+
+.hBar_grid:hover{
+  background-color: rgb(255, 128, 255);
+  color: white;
+}
+
+.persona_body{
+  font-family: 'Londrina Shadow', cursive;
+}
+
+.persona_year{
+  height: 200px;
+  width: 400px;
+  overflow: hidden;
+  font-size: 10em;
+  position: relative;
+  top: -900px;
+  left: 550px;
+}
+
+.persona_month{
+  height: 200px;
+  width: 100px;
+  overflow: hidden;
+  font-size: 8em;
+  position: relative;
+  top: -900px;
+  left: 850px;
 }

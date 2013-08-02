@@ -30,11 +30,6 @@ a{
   padding-right: 5px;
 }
 
-.test1{
-  min-height: 300px;
-  background-color: rgb(255, 255, 255);
-}
-
 .c_navbar_fixed{
   position: fixed;
   top: 0;
@@ -67,10 +62,10 @@ a{
   color: rgb(0, 0, 0);
 }
 
-.c_navbar_fixed a:hover{
+/*.c_navbar_fixed a:hover{
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-}
+}*/
 
 .c_footer{
   width: 100%;
@@ -88,7 +83,7 @@ a{
   min-height: inherit;
 }
 
-.cfl{
+.c_footer_table #cfl{
   float: left;
   width: 520px;
   min-height: inherit;
@@ -100,7 +95,7 @@ a{
   color: rgb(168, 168, 168);
 }
 
-.cfr{
+.c_footer_table #cfr{
   float: left;
   width: 360px;
   min-height: inherit;
@@ -122,13 +117,66 @@ a{
   padding: 5px 0;
 }
 
-.c_footer_table a{
+.c_footer_table #cfr a{
   color: rgb(255, 255, 255);
   display: block;
   padding: 5px 25px;
 }
 
-.c_footer_table a:hover{
+/*
+Make all 'hover' here;
+*/
+.c_navbar_fixed a:hover,
+.c_footer_table #cfr a:hover,
+.c_opus #c_opus_bp #opus_url a:hover{
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+
+  transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -o-transition: color .25s ease-in-out;
+}
+
+/*
+2013.8.2
+display each opus;
+tp for top part;
+bp for bottom part;
+*/
+.c_opus{
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.c_opus #c_opus_tp{
+  font-size: 2em;
+}
+
+.c_opus #c_opus_bp{
+  padding-top: 5px;
+  padding-left: 30px;
+}
+
+.c_opus #c_opus_bp #opus_url{
+  padding-top: 5px;
+}
+
+.c_opus #c_opus_bp #opus_url{
+  color: rgb(0, 0, 0);
+}
+
+.c_opus #c_opus_bp #opus_url a{
+  padding: .2em .5em;
+}
+
+.c_opus #c_opus_bp #opus_desc{
+  padding: .2em .5em;
+  word-wrap: break-word;
+}
+
+.c_opus #c_opus_bp #opus_mod_date{
+  float: right;
+  font-size: 0.8em;
+  color: rgb(216, 216, 216);
 }

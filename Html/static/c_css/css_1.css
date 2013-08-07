@@ -9,7 +9,7 @@ body{
   min-width: 960px;
   min-height: 800px;
 
-  font-size: 12px;
+  font-size: 20px;
 }
 
 a{
@@ -120,19 +120,26 @@ a{
 }
 
 .c_footer_table #cfr a{
-  color: rgb(255, 255, 255);
-  display: block;
-  padding: 5px 25px;
+  padding: .2em .5em;
 }
 
 /*
 Make all 'hover' here;
 */
 .c_navbar_fixed a:hover,
-.c_footer_table #cfr a:hover,
 .c_opus #c_opus_bp #opus_url a:hover{
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+
+  transition: color .25s ease-in-out;
+  -webkit-transition: color .25s ease-in-out;
+  -moz-transition: color .25s ease-in-out;
+  -o-transition: color .25s ease-in-out;
+}
+
+.c_footer_table #cfr a:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(168, 168, 168);
 
   transition: color .25s ease-in-out;
   -webkit-transition: color .25s ease-in-out;

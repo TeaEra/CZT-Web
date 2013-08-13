@@ -43,12 +43,12 @@
 
 .persona_body{
   font-family: 'Londrina Shadow', cursive;
+  height: auto;
 }
 
 .persona_year{
   height: 200px;
   width: 400px;
-  overflow: hidden;
   font-size: 10em;
   position: relative;
   top: -900px;
@@ -58,9 +58,8 @@
 .persona_month{
   height: 200px;
   width: 100px;
-  overflow: hidden;
   font-size: 8em;
   position: relative;
   top: -900px;
-  left: 850px;
+  left: 750px;
 }

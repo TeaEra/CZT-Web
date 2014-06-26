@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="libs/FontAwesome/font-awesome-4.1.0/css/font-awesome.min.css"/>
     <!-- Lib: font mfizz -->
     <link rel="stylesheet" href="libs/FontAwesome/font-mfizz-1.2/font-mfizz.css"/>
+    <!-- Lib: timeline -->
+    <link rel="stylesheet" href="libs/timeline/timeline.css"/>
     <!-- [Should write module/lib name here] -->
 
     <!-- Inline styles -->
@@ -70,14 +72,6 @@
             padding-left: 20px;
         }
     </style>
-
-    <!-- Inline scripts -->
-    <script type="text/javascript" src="libs/TE/js/TEResume.js" />
-    <script type="text/javascript" src="libs/TE/js/te-util.js"></script>
-    <script type="text/javascript">
-        alert(123);
-        test("index_teaera", "123");
-    </script>
 </head>
 
 <!-- ############################################################################################################### -->
@@ -91,8 +85,8 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#index_teaera">Intro</a></li>
-                <li><a onclick="" href="#">My-Timeline</a></li>
+                <li class="active"><a href="#intro_teaera" id="skillProfile_teaera">Intro</a></li>
+                <li><a href="#intro_teaera" id="timeline_teaera">My-Timeline</a></li>
                 <li><a href="#contact_teaera">Contact</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -108,130 +102,26 @@
     </div>
 </div>
 
-<div id="index_teaera" class="container wrapper">
-    <!-- -->
-    <h3 class="page-header">Programming languages</h3>
-    <div class="table-responsive left-padding">
-        <table class="table table-striped">
-            <thead></thead>
-            <tbody>
-                <tr>
-                    <td class="fa-4x"><i class="icon-cplusplus"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-c"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-csharp"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-python"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-java"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-javascript"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-php"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-html"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-css"></i></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <!-- -->
-    <h3 class="page-header">Operating Systems</h3>
-    <div class="table-responsive left-padding">
-        <table class="table table-striped">
-            <thead></thead>
-            <tbody>
-                <tr>
-                    <td class="fa-4x"><i class="icon-fedora"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-ubuntu"></i></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="fa-4x"><i class="icon-osx"></i></td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="container wrapper" id="intro_teaera">
+    <!-- templateIntro -->
 </div>
 
 <footer class="footer" id="contact_teaera">
-    <div class="container">
-        <div class="col-md-4">
-            <div class="fa-2x dotted-border-bottom">
-                <span class="glyphicon glyphicon-user"></span>
-                &nbsp;About
-            </div>
-            <div>
-                <span class="glyphicon glyphicon-hand-right"></span>
-                &nbsp;<b class="big-name">CHEN Zhengtong</b>
-            </div>
-            <div>
-                <span class="glyphicon glyphicon-hand-right"></span>
-                &nbsp;<b class="big-name">Vince CHEN</b>
-            </div>
-            <br />
-            <div>
-                Just hope life could be simple.
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="fa-2x dotted-border-bottom">
-                <span class="glyphicon glyphicon-envelope"></span>
-                &nbsp;Email
-            </div>
-            <div>
-                <i class="fa fa-google icon-min-size"></i>
-                <a>cllf08214@gmail.com</a>
-            </div>
-            <div>
-                <i class="fa fa-qq"></i>
-                <a>cllf08214@qq.com</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="fa-2x dotted-border-bottom">
-                <i class="fa fa-desktop"></i>
-                &nbsp;Just do IT
-            </div>
-            <div>
-                <i class="fa fa-github"></i>
-                <a>https://github.com/TeaEra</a>
-            </div>
-            <div>
-                <i class="fa fa-weibo"></i>
-                <a>http://weibo.com/teaera</a>
-            </div>
-        </div>
-    </div>
+    <!-- templateFooter -->
 </footer>
 
 <!-- Lib: jquery scripts -->
 <script src="libs/jQuery/1.11.0/jquery-1.11.0.min.js"></script>
 <!-- Lib: bootstrap scripts -->
 <script src="libs/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!-- Lib: underscore -->
+<script src="libs/underscore/underscore-min.js"></script>
+<!-- TE: TEResume.js -->
+<script src="libs/TE/js/TEResume.js"></script>
+<!-- TE: te-util.js -->
+<script src="libs/TE/js/te-util.js"></script>
+<!-- TE: te-template.js -->
+<script src="libs/TE/js/te-template.js"></script>
 <!-- [Should write module/lib name here] -->
 
 <!-- Inline scripts -->
@@ -245,6 +135,16 @@
             $this.addClass('active');
         }
         //e.preventDefault();
+    });
+
+    $("#intro_teaera").html(templateIntro(window.czt.skillProfile));
+    $("#contact_teaera").html(templateFooter({}));
+
+    $("#skillProfile_teaera").click(function(e) {
+        $("#intro_teaera").html(templateIntro(window.czt.skillProfile));
+    });
+    $('#timeline_teaera').click(function(e) {
+        $("#intro_teaera").html(templateTimeline({}));
     });
 </script>
 </body>

@@ -3,7 +3,3 @@
  */
 
 "use strict";
-
-function test(id, content) {
-    document.getElementById(id).innerHTML = content;
-}

@@ -59,4 +59,52 @@
         // Interest
         "interest" : ["Basketball", "American pool", "Hiking"]
     };
+
+    window.czt.skillProfile = {
+        "programming-language" : {
+            "cplusplus" : {
+                "proficiency" : 60
+            },
+            "c" : {
+                "proficiency" : 60
+            },
+            "java" : {
+                "proficiency" : 60
+            },
+            "csharp" : {
+                "proficiency" : 60
+            },
+            "php" : {
+                "proficiency" : 60
+            },
+            "python" : {
+                "proficiency" : 60
+            },
+            "javascript" : {
+                "proficiency" : 60
+            },
+            "html" : {
+                "proficiency" : 60
+            },
+            "css" : {
+                "proficiency" : 60
+            }
+        },
+        "operating-system" : {
+            "linux" : {
+                "fedora" : {
+                    "proficiency" : 60
+                },
+                "ubuntu" : {
+                    "proficiency" : 60
+                }
+            },
+            "macos" : {
+                "proficiency" : 60
+            },
+            "windows" : {
+                "proficiency" : 60
+            }
+        }
+    };
 })();

@@ -3,7 +3,7 @@
   
   // some codes here;
   function test() {
-    alert(123);
+    alert("Hello, TeaEra!");
   }
   
   window.teaera = window.teaera || {};

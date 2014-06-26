@@ -91,20 +91,102 @@
             }
         },
         "operating-system" : {
-            "linux" : {
-                "fedora" : {
-                    "proficiency" : 60
-                },
-                "ubuntu" : {
-                    "proficiency" : 60
-                }
-            },
-            "macos" : {
+            "fedora" : {
                 "proficiency" : 60
             },
-            "windows" : {
+            "ubuntu" : {
+                "proficiency" : 60
+            },
+            "osx" : {
                 "proficiency" : 60
             }
+        }
+    };
+
+    window.czt.settings = {
+        "icon" : {
+            "work" : "glyphicon-folder-open",
+            "education" : "glyphicon-book",
+            "certificate" : "glyphicon-certificate",
+            "comment" : "glyphicon-comment",
+            "paperclip" : "glyphicon-paperclip"
+        }
+    };
+
+    window.czt.timeLine = {
+        "2014" : {
+            "5" : [
+                {
+                    "type" : "work",
+                    "title" : "ecVision"
+                }
+            ]
+        },
+        "2013" : {
+            "11" : [
+                {
+                    "type" : "work",
+                    "title" : "ecVision"
+                }
+            ],
+            "9" : [
+                {
+                    "type" : "work",
+                    "title" : "Lab OpenCog"
+                }
+            ],
+            "3" : [
+                {
+                    "type" : "work",
+                    "title" : "Lab OpenCog"
+                },
+                {
+                    "type" : "work",
+                    "title" : "Biomind LLC"
+                }
+            ]
+        },
+        "2012" : {
+            "12" : [
+                {
+                    "type" : "work",
+                    "title" : "test"
+                }
+            ],
+            "3" : [
+                {
+                    "type" : "work",
+                    "title" : "Biomind LLC"
+                }
+            ],
+            "1" : [
+                {
+                    "type" : "education",
+                    "title" : "Hong Kong Polytechnic University"
+                }
+            ]
+        },
+        "2010" : {
+            "9" : [
+                {
+                    "type" : "education",
+                    "title" : "Hong Kong Polytechnic University"
+                }
+            ],
+            "7" : [
+                {
+                    "type" : "education",
+                    "title" : "Tianjin University"
+                }
+            ]
+        },
+        "2006" : {
+            "9" : [
+                {
+                    "type" : "education",
+                    "title" : "Tianjin University"
+                }
+            ]
         }
     };
 })();

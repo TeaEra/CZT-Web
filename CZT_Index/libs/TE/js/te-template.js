@@ -2,7 +2,12 @@
  * Created by TeaEra on 2014/6/26.
  */
 
+"use strict";
+
+//######################################################################################################################
+// A static template for [introduction];
 var templateIntro = _.template('\
+\
 <!-- -->\
 <h3 class="page-header">Programming languages</h3>\
 <div class="table-responsive left-padding">\
@@ -15,12 +20,20 @@ var templateIntro = _.template('\
                     <%= arguments[0]["programming-language"]["cplusplus"]["proficiency"] %>\
                 </td>\
                 <td>\
-                    some description\
+                    <p>some description</p>\
                 </td>\
             </tr>\
             <tr>\
                 <td class="fa-4x"><i class="icon-c"></i></td>\
-                <td></td>\
+                <td>\
+                    <div class="progress">\
+                        <div class="progress-bar" role="progressbar" \
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" \
+                            style="width: 60%;">\
+                            60%\
+                        </div>\
+                    </div>\
+                </td>\
                 <td>\
                     some description\
                 </td>\
@@ -106,65 +119,69 @@ var templateIntro = _.template('\
             </tr>\
         </tbody>\
     </table>\
-    </div>\
+</div>\
 ');
 
+//######################################################################################################################
+// A static template for [footer];
 var templateFooter = _.template('\
 \<div class="container">\
     <div class="col-md-4">\
-    <div class="fa-2x dotted-border-bottom">\
-        <span class="glyphicon glyphicon-user"></span>\
-    &nbsp;About\
+        <div class="fa-2x dotted-border-bottom">\
+            <span class="glyphicon glyphicon-user"></span>\
+            &nbsp;About\
+        </div>\
+        <div>\
+            <span class="glyphicon glyphicon-hand-right"></span>\
+            &nbsp;<b class="big-name">CHEN Zhengtong</b>\
+        </div>\
+        <div>\
+            <span class="glyphicon glyphicon-hand-right"></span>\
+            &nbsp;<b class="big-name">Vince CHEN</b>\
+        </div>\
+        <br />\
+        <div>\
+            <p>Just hope life could be simple.</p>\
+        </div>\
     </div>\
-    <div>\
-    <span class="glyphicon glyphicon-hand-right"></span>\
-    &nbsp;<b class="big-name">CHEN Zhengtong</b>\
-</div>\
-<div>\
-    <span class="glyphicon glyphicon-hand-right"></span>\
-&nbsp;<b class="big-name">Vince CHEN</b>\
-</div>\
-<br />\
-<div>\
-    <p>Just hope life could be simple.</p>\
-</div>\
-</div>\
-<div class="col-md-4">\
-    <div class="fa-2x dotted-border-bottom">\
-        <span class="glyphicon glyphicon-envelope"></span>\
-    &nbsp;Email\
+    <div class="col-md-4">\
+        <div class="fa-2x dotted-border-bottom">\
+            <span class="glyphicon glyphicon-envelope"></span>\
+            &nbsp;Email\
+        </div>\
+        <div>\
+            <i class="fa fa-google icon-min-size"></i>\
+            <a>cllf08214@gmail.com</a>\
+        </div>\
+        <div>\
+            <i class="fa fa-qq"></i>\
+            <a>cllf08214@qq.com</a>\
+        </div>\
     </div>\
-    <div>\
-        <i class="fa fa-google icon-min-size"></i>\
-        <a>cllf08214@gmail.com</a>\
+    <div class="col-md-4">\
+        <div class="fa-2x dotted-border-bottom">\
+            <i class="fa fa-desktop"></i>\
+            &nbsp;Just do IT\
+        </div>\
+        <div>\
+            <i class="fa fa-github"></i>\
+            <a>https://github.com/TeaEra</a>\
+        </div>\
+        <div>\
+            <i class="fa fa-weibo"></i>\
+            <a>http://weibo.com/teaera</a>\
+        </div>\
     </div>\
-    <div>\
-        <i class="fa fa-qq"></i>\
-        <a>cllf08214@qq.com</a>\
-    </div>\
-</div>\
-<div class="col-md-4">\
-    <div class="fa-2x dotted-border-bottom">\
-        <i class="fa fa-desktop"></i>\
-    &nbsp;Just do IT\
-    </div>\
-    <div>\
-    <i class="fa fa-github"></i>\
-    <a>https://github.com/TeaEra</a>\
-</div>\
-    <div>\
-        <i class="fa fa-weibo"></i>\
-        <a>http://weibo.com/teaera</a>\
-    </div>\
-</div>\
 </div>\
 ');
 
+//######################################################################################################################
+// A static template for [time-line];
 var templateTimeline = _.template('\
-        \<div class="page-header">\
-            <h1 id="timeline">Timeline</h1>\
-        </div>\
-        <ul class="timeline">\
+<div class="page-header">\
+    <h1 id="timeline">Timeline</h1>\
+</div>\
+<ul class="timeline">\
     <li>\
         <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>\
         <div class="timeline-panel">\
@@ -292,5 +309,97 @@ massa.</p>\
             </div>\
         </div>\
     </li>\
+</ul>\
+');
+
+//######################################################################################################################
+// An adapted template for [introduction];
+var adaptedTemplateSkillProfile = _.template('\
+<% var skillProfile = arguments[0];\
+   for(eachSkill in skillProfile) { \
+       var skillType = skillProfile[eachSkill]; %>\
+       <h3 class="page-header"><%=eachSkill %></h3>\
+       <div class="table-responsive left-padding">\
+           <table class="table table-striped">\
+               <thead></thead>\
+               <tbody>\
+               <% for(eachKey in skillType) { \
+                   skillObj = skillType[eachKey];%>\
+                   <tr>\
+                      <td class="fa-4x" style="width: 150px;">\
+                        <i class="icon-<%=eachKey %>"></i>\
+                      </td>\
+                      <td style="vertical-align: middle; width: 300px;">\
+                          <% var proficiency = skillObj["proficiency"]; %>\
+                          <div class="progress">\
+                              <div class="progress-bar" role="progressbar" \
+                                  aria-valuenow="<%=proficiency %>" \
+                                  aria-valuemin="0" \
+                                  aria-valuemax="100" \
+                                  style="width: <%=proficiency %>%;">\
+                                  <%=proficiency %>%\
+                              </div>\
+                          </div>\
+                      </td>\
+                      <td>\
+                          <ul>\
+                            <li>some description</li>\
+                          </ul>\
+                      </td>\
+                   </tr>\
+               <% } %>\
+               </tbody>\
+           </table>\
+       </div>\
+<% } %>\
+');
+
+//######################################################################################################################
+// An adapted template for [time-line];
+var adaptedTemplateTimeLine = _.template('\
+\<div class="page-header">\
+    <h1 id="timeline">Timeline</h1>\
+</div>\
+<ul class="timeline">\
+    <% \
+    var timeLine = arguments[0]["timeLine"];\
+    var timeLineSettings = arguments[0]["timeLineSettings"];\
+    var count = 1;\
+    var outHTML = "";\
+    for(yearKey in timeLine) { \
+        var yearObj = timeLine[yearKey];\
+        for(monthKey in yearObj) {\
+            var dayList = yearObj[monthKey];\
+            for(eachKey in dayList) {\
+                var eachObj = dayList[eachKey];\
+                var lr = count++ % 2 == 1 ? "" : "class=\'timeline-inverted\'";\
+                var icon = timeLineSettings["icon"][eachObj["type"]];\
+                var title = eachObj["title"];\
+                var date = yearKey + "." + monthKey;\
+                var outHTML = \'\
+                <li \' + lr + \'>\
+                    <div class="timeline-badge">\
+                        <i class="glyphicon \' + icon + \'"></i>\
+                    </div>\
+                    <div class="timeline-panel">\
+                        <div class="timeline-heading">\
+                            <h4 class="timeline-title">\' + title + \'</h4>\
+                            <p>\
+                                <small class="text-muted"><i class="glyphicon glyphicon-calendar"></i>\
+                                    \' + date + \'\
+                                </small>\
+                            </p>\
+                        </div>\
+                        <div class="timeline-body">\
+                            <p>some description</p>\
+                        </div>\
+                    </div>\
+                </li>\
+                \' + outHTML;\
+            }\
+        }\
+    }\
+    print(outHTML);\
+    %>\
 </ul>\
 ');

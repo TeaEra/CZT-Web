@@ -38,6 +38,7 @@
             min-height: 800px;
             height: auto;
             /*margin: 0 auto -180px;*/ /* the bottom margin is the negative value of the footer's height */
+            padding-top: 25px;
         }
         .footer {
             height: 180px; /* .push must be the same height as .footer */
@@ -71,6 +72,10 @@
         .left-padding {
             padding-left: 20px;
         }
+
+        .vertical-middle {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -81,7 +86,7 @@
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="">TeaEra</a>
+            <a class="navbar-brand big-name" href="">TeaEra</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -137,15 +142,23 @@
         //e.preventDefault();
     });
 
-    $("#intro_teaera").html(templateIntro(window.czt.skillProfile));
+    //$("#intro_teaera").html(templateIntro(window.czt.skillProfile));
+    $("#intro_teaera").html(adaptedTemplateSkillProfile(window.czt.skillProfile));
     $("#contact_teaera").html(templateFooter({}));
 
     $("#skillProfile_teaera").click(function(e) {
-        $("#intro_teaera").html(templateIntro(window.czt.skillProfile));
+        $("#intro_teaera").html(adaptedTemplateSkillProfile(window.czt.skillProfile));
     });
     $('#timeline_teaera').click(function(e) {
-        $("#intro_teaera").html(templateTimeline({}));
+        //$("#intro_teaera").html(templateTimeline({}));
+        $("#intro_teaera").html(adaptedTemplateTimeLine(
+                {
+                    "timeLine" : window.czt.timeLine,
+                    "timeLineSettings" : window.czt.settings
+                }
+        ));
     });
 </script>
+
 </body>
 </html>

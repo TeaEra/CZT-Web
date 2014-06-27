@@ -422,15 +422,20 @@ var adaptedTemplateTest = _.template('\
         %>\
             <tr>\
                 <td>\
-                <p>\
-                    <i class="glyphicon glyphicon-chevron-right"></i>\
-                    <%=title %>\
-                </p>\
+                    <p>\
+                        <i class="glyphicon glyphicon-chevron-right"></i>\
+                        <%=title %>\
+                    </p>\
                 </td>\
                 <td>\
-                <p>\
-                    <a target="_blank" href="<%=url %>"><%=name %></a>\
-                </p>\
+                    <p>\
+                        <a target="_blank" href="<%=url %>"><%=name %></a>\
+                    </p>\
+                </td>\
+                <td>\
+                    <div class="outFrame">\
+                        <iframe class="inFrame" src="<%=url %>"></iframe>\
+                    </div>\
                 </td>\
             </tr>\
         <%\

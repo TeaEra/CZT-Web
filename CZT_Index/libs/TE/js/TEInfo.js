@@ -8,11 +8,13 @@
 
     window.teaera = window.teaera || {};
     window.teaera.info = {
-        "name": "Zhengtong CHEN",
-        "name_en": "Vince",
-        "name_zh": "陈政通"
+        "nickname" : "TeaEra",
+        "name" : "CHEN Zhengtong",
+        "name_en" : "Vince",
+        "name_zh" : "陈政通"
     };
 
+    //##################################################################################################################
     window.teaera.test = [
         {
             "title" : "Black&White index",
@@ -22,7 +24,7 @@
         {
             "title" : "Persona",
             "name" : "test_persona.html",
-            "url" : "libs/TE/test/pages/test_index_b&w.html"
+            "url" : "libs/TE/test/pages/test_persona.html"
         },
         {
             "title" : "TimeLine",

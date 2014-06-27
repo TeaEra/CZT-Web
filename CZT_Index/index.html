@@ -39,6 +39,7 @@
             height: auto;
             /*margin: 0 auto -180px;*/ /* the bottom margin is the negative value of the footer's height */
             padding-top: 25px;
+            padding-bottom: 25px;
         }
         .footer {
             height: 180px; /* .push must be the same height as .footer */
@@ -83,15 +84,30 @@
 
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
+        <!--
         <div class="navbar-header">
             <a class="navbar-brand big-name" href="">TeaEra</a>
         </div>
-        <div class="collapse navbar-collapse">
+        -->
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand big-name" href="">Brand</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#intro_teaera" id="skillProfile_teaera">Intro</a></li>
                 <li><a href="#intro_teaera" id="timeline_teaera">My-Timeline</a></li>
+                <li><a href="#intro_teaera" id="test_teaera">My-Test</a></li>
                 <li><a href="#contact_teaera">Contact</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -105,7 +121,7 @@
             </ul>
         </div>
     </div>
-</div>
+</nav>
 
 <div class="container wrapper" id="intro_teaera">
     <!-- templateIntro -->
@@ -121,6 +137,8 @@
 <script src="libs/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <!-- Lib: underscore -->
 <script src="libs/underscore/underscore-min.js"></script>
+<!-- Lib: TEInfo.js -->
+<script src="libs/TE/js/TEInfo.js"></script>
 <!-- TE: TEResume.js -->
 <script src="libs/TE/js/TEResume.js"></script>
 <!-- TE: te-util.js -->
@@ -152,11 +170,14 @@
     $('#timeline_teaera').click(function(e) {
         //$("#intro_teaera").html(templateTimeline({}));
         $("#intro_teaera").html(adaptedTemplateTimeLine(
-                {
-                    "timeLine" : window.czt.timeLine,
-                    "timeLineSettings" : window.czt.settings
-                }
+            {
+                "timeLine" : window.czt.timeLine,
+                "timeLineSettings" : window.czt.settings
+            }
         ));
+    });
+    $("#test_teaera").click(function(e) {
+        $("#intro_teaera").html(adaptedTemplateTest(window.teaera.test));
     });
 </script>
 

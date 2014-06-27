@@ -327,7 +327,9 @@ var adaptedTemplateSkillProfile = _.template('\
                    skillObj = skillType[eachKey];%>\
                    <tr>\
                       <td class="fa-4x" style="width: 150px;">\
+                      <p>\
                         <i class="icon-<%=eachKey %>"></i>\
+                      </p>\
                       </td>\
                       <td style="vertical-align: middle; width: 300px;">\
                           <% var proficiency = skillObj["proficiency"]; %>\
@@ -374,11 +376,12 @@ var adaptedTemplateTimeLine = _.template('\
                 var eachObj = dayList[eachKey];\
                 var lr = count++ % 2 == 1 ? "" : "class=\'timeline-inverted\'";\
                 var icon = timeLineSettings["icon"][eachObj["type"]];\
+                var contextual = timeLineSettings["contextual"][eachObj["type"]];\
                 var title = eachObj["title"];\
                 var date = yearKey + "." + monthKey;\
                 var outHTML = \'\
                 <li \' + lr + \'>\
-                    <div class="timeline-badge">\
+                    <div class="timeline-badge \' + contextual + \'">\
                         <i class="glyphicon \' + icon + \'"></i>\
                     </div>\
                     <div class="timeline-panel">\
@@ -402,4 +405,37 @@ var adaptedTemplateTimeLine = _.template('\
     print(outHTML);\
     %>\
 </ul>\
+');
+//######################################################################################################################
+// An adapted template for [test];
+var adaptedTemplateTest = _.template('\
+\<h3 class="page-header">My-Test</h3>\
+<div class="table-responsive">\
+    <table class="table table-striped">\
+        <%\
+        var testList = arguments[0];\
+        for (idx in testList) {\
+            var test = testList[idx];\
+            var title = test["title"];\
+            var name = test["name"];\
+            var url = test["url"];\
+        %>\
+            <tr>\
+                <td>\
+                <p>\
+                    <i class="glyphicon glyphicon-chevron-right"></i>\
+                    <%=title %>\
+                </p>\
+                </td>\
+                <td>\
+                <p>\
+                    <a target="_blank" href="<%=url %>"><%=name %></a>\
+                </p>\
+                </td>\
+            </tr>\
+        <%\
+        }\
+        %>\
+    </table>\
+</div>\
 ');

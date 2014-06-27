@@ -110,6 +110,13 @@
             "certificate" : "glyphicon-certificate",
             "comment" : "glyphicon-comment",
             "paperclip" : "glyphicon-paperclip"
+        },
+        "contextual" : {
+            "paperclip" : "active",
+            "certificate" : "success",
+            "education" : "info",
+            "comment" : "warning",
+            "work" : "danger"
         }
     };
 

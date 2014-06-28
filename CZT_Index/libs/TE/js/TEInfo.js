@@ -35,6 +35,11 @@
             "title" : "FontAwesome",
             "name" : "test_fontawesome.html",
             "url" : "libs/TE/test/pages/test_fontawesome.html"
+        },
+        {
+            "title" : "Demo for Penny",
+            "name" : "test_forPenny.html",
+            "url" : "libs/TE/test/pages/test_forPenny.html"
         }
     ];
 })();

@@ -40,6 +40,11 @@
             "title" : "Demo for Penny",
             "name" : "test_forPenny.html",
             "url" : "libs/TE/test/pages/test_forPenny.html"
+        },
+        {
+            "title" : "A keyboard",
+            "name" : "test_keyboard.html",
+            "url" : "libs/TE/test/pages/test_keyboard.html"
         }
     ];
 })();

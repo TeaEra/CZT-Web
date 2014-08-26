@@ -7,6 +7,7 @@ var str = "life is very much like a mirror.";
 var result = str.match(/is|a/g);
 console.log(result);
 
+// Closure
 var outter = [];
 function clouseTest() {
     var array = ["one", "two", "three", "four"];
@@ -26,6 +27,7 @@ for (var each in outter) {
 }
 // 会多一个undefined?
 
+// Closure
 var outter2 = [];
 function clouseTest2() {
     var array = ["one", "two", "three", "four"];
@@ -50,6 +52,7 @@ for (var each in outter2) {
 // Closure:
 // http://stackoverflow.com/questions/111102/how-do-javascript-closures-work
 
+// prototype
 var Level1 = function () {
     this.show1 = function () {
         console.log(1);
@@ -85,3 +88,4 @@ testLevel3.show3();
 (function () {
     document.write("<div id='panel'></div>");
 })();
+

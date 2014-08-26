@@ -5,7 +5,7 @@
 
     window.czt = window.czt || {};
 
-    //##################################################################################################################
+    //##########################################################################
     window.czt.resume = {
         // Basic information
         "info": {
@@ -61,51 +61,98 @@
         "interest" : ["Basketball", "American pool", "Hiking"]
     };
 
-    //##################################################################################################################
+    //##########################################################################
     window.czt.skillProfile = {
         "programming-language" : {
             "cplusplus" : {
-                "proficiency" : 60
+                "proficiency" : 50,
+                "description" : [
+                    "Undergraduate curriculum",
+                    "Project: DeSTIN",
+                ]
             },
             "c" : {
-                "proficiency" : 60
+                "proficiency" : 50,
+                "description" : [
+                    "Self-study",
+                    "Project: DeSTIN",
+                ]
             },
             "java" : {
-                "proficiency" : 60
+                "proficiency" : 60,
+                "description" : [
+                    "Undergraduate curriculum",
+                    "Project: OpenBiomind",
+                    "Company: ecVision",
+                ]
             },
             "csharp" : {
-                "proficiency" : 60
+                "proficiency" : 30,
+                "description" : [
+                    "Self-study on campus",
+                    "Project: Library Management System",
+                ]
             },
             "php" : {
-                "proficiency" : 60
+                "proficiency" : 40,
+                "description" : [
+                    "Self-study",
+                ]
             },
             "python" : {
-                "proficiency" : 60
+                "proficiency" : 70,
+                "description" : [
+                    "Self-study",
+                    "Project: OpenBiomind",
+                    "Project: DeSTIN",
+                    "Project: QuantDigger",
+                ]
             },
             "javascript" : {
-                "proficiency" : 60
+                "proficiency" : 60,
+                "description" : [
+                    "Self-study",
+                    "Tool: bootstrap, jquery, underscore",
+                ]
             },
             "html" : {
-                "proficiency" : 60
+                "proficiency" : 50,
+                "description" : [
+                    "Self-study",
+                    "Simple web pages",
+                ]
             },
             "css" : {
-                "proficiency" : 60
+                "proficiency" : 30,
+                "description" : [
+                    "Self-study",
+                    "Simple effects",
+                ]
             }
         },
         "operating-system" : {
             "fedora" : {
-                "proficiency" : 60
+                "proficiency" : 60,
+                "description" : [
+                    "Linux system",
+                ]
             },
             "ubuntu" : {
-                "proficiency" : 60
+                "proficiency" : 60,
+                "description" : [
+                    "Linux system",
+                ]
             },
             "osx" : {
-                "proficiency" : 60
+                "proficiency" : 60,
+                "description" : [
+                    "Personal use",
+                ]
             }
         }
     };
 
-    //##################################################################################################################
+    //##########################################################################
     window.czt.settings = {
         "icon" : {
             "work" : "glyphicon-folder-open",
@@ -129,7 +176,10 @@
             "5" : [
                 {
                     "type" : "work",
-                    "title" : "ecVision"
+                    "title" : "ecVision",
+                    "description": [
+                        "  Expiration of contract.",
+                    ]
                 }
             ]
         },
@@ -137,43 +187,55 @@
             "11" : [
                 {
                     "type" : "work",
-                    "title" : "ecVision"
+                    "title" : "ecVision",
+                    "description": [
+                        "  Contract starting date.",
+                    ]
                 }
             ],
             "9" : [
                 {
                     "type" : "work",
-                    "title" : "Lab OpenCog"
+                    "title" : "Lab OpenCog",
+                    "description": [
+                        "  Resign from Project DeSTIN.",
+                    ]
                 }
             ],
             "3" : [
                 {
                     "type" : "work",
-                    "title" : "Lab OpenCog"
+                    "title" : "Lab OpenCog",
+                    "description": [
+                        "  Start improving Project DeSTIN.",
+                    ]
                 },
                 {
                     "type" : "work",
-                    "title" : "Biomind LLC"
+                    "title" : "Biomind LLC",
+                    "description": [
+                        "  Job relocation from OpenBiomind to DeSTIN.",
+                    ]
                 }
             ]
         },
         "2012" : {
-            "12" : [
-                {
-                    "type" : "work",
-                    "title" : "test"
-                }
-            ],
             "3" : [
                 {
                     "type" : "work",
-                    "title" : "Biomind LLC"
+                    "title" : "Biomind LLC",
+                    "description": [
+                        "  Start working on bioinformatics.",
+                    ]
                 }
             ],
             "1" : [
                 {
                     "type" : "education",
-                    "title" : "Hong Kong Polytechnic University"
+                    "title" : "Hong Kong Polytechnic University",
+                    "description": [
+                        "  Graduate from HKPU.",
+                    ]
                 }
             ]
         },
@@ -181,13 +243,19 @@
             "9" : [
                 {
                     "type" : "education",
-                    "title" : "Hong Kong Polytechnic University"
+                    "title" : "Hong Kong Polytechnic University",
+                    "description": [
+                        "  Term begins.",
+                    ]
                 }
             ],
             "7" : [
                 {
                     "type" : "education",
-                    "title" : "Tianjin University"
+                    "title" : "Tianjin University",
+                    "description": [
+                        "  Graduate from Tianjin University.",
+                    ]
                 }
             ]
         },
@@ -195,11 +263,14 @@
             "9" : [
                 {
                     "type" : "education",
-                    "title" : "Tianjin University"
+                    "title" : "Tianjin University",
+                    "description": [
+                        "  Term begins.",
+                    ]
                 }
             ]
         }
     };
 
-    //##################################################################################################################
+    //##########################################################################
 })();

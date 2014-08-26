@@ -324,15 +324,16 @@ var adaptedTemplateSkillProfile = _.template('\
                <thead></thead>\
                <tbody>\
                <% for(eachKey in skillType) { \
-                   skillObj = skillType[eachKey];%>\
+                   var skillObj = skillType[eachKey]; \
+                   var proficiency = skillObj["proficiency"]; \
+                   var description = skillObj["description"]; %>\
                    <tr>\
                       <td class="fa-4x" style="width: 150px;">\
                       <p>\
-                        <i class="icon-<%=eachKey %>"></i>\
+                        <i class="icon-<%=eachKey %>" title="<%=eachKey %>"></i>\
                       </p>\
                       </td>\
                       <td style="vertical-align: middle; width: 300px;">\
-                          <% var proficiency = skillObj["proficiency"]; %>\
                           <div class="progress">\
                               <div class="progress-bar" role="progressbar" \
                                   aria-valuenow="<%=proficiency %>" \
@@ -345,7 +346,9 @@ var adaptedTemplateSkillProfile = _.template('\
                       </td>\
                       <td>\
                           <ul>\
-                            <li>some description</li>\
+                            <% for (idx in description) { %>\
+                                <li><%=description[idx] %></li>\
+                            <% } %>\
                           </ul>\
                       </td>\
                    </tr>\
@@ -379,6 +382,11 @@ var adaptedTemplateTimeLine = _.template('\
                 var contextual = timeLineSettings["contextual"][eachObj["type"]];\
                 var title = eachObj["title"];\
                 var date = yearKey + "." + monthKey;\
+                var description = eachObj["description"];\
+                var str_desc="";\
+                for (idx in description) {\
+                    str_desc += "<p>" + description[idx] + "</p>";\
+                }\
                 var outHTML = \'\
                 <li \' + lr + \'>\
                     <div class="timeline-badge \' + contextual + \'">\
@@ -393,8 +401,8 @@ var adaptedTemplateTimeLine = _.template('\
                                 </small>\
                             </p>\
                         </div>\
-                        <div class="timeline-body">\
-                            <p>some description</p>\
+                        <div class="timeline-body">\'\
+                            + str_desc + \'\
                         </div>\
                     </div>\
                 </li>\

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <title>Test some little codes</title>
+
+    <style>
+    .circle-container {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        height: auto;
+        vertical-align: middle;
+        z-index: 5;
+        transform: translateY(-50%);
+    }
+
+    .circle-1 {
+        width: 20px;
+        height: 20px;
+        background:#dddddd;
+        border-radius:10px;
+        margin: 10px;
+    }
+
+    .circle-1:link {}
+    .circle-1:visited {}
+    .circle-1:hover {
+        border: 2px solid #a1a1a1;
+        border-radius: 12px;
+    }
+    .circle-1:active {}
+
+    .section-r {
+        background: #ff0000;
+    }
+    .section-g {
+        background: #00ff00;
+    }
+    .section-b {
+        background: #0000ff;
+    }
+    .section-size {
+        width: 100%;
+        height: 600px;
+    }
+    </style>
+</head>
+<body>
+    <section class="section-r section-size"></section>
+    <section class="section-g section-size"></section>
+    <section class="section-b section-size"></section>
+
+    <div class="circle-container">
+        <div class="circle-1"></div>
+        <div class="circle-1"></div>
+        <div class="circle-1"></div>
+    </div>
+</body>
+</html>

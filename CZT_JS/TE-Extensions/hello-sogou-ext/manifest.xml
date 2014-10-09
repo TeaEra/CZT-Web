@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <id>"com.teaera.helloext"</id>
+    <name>"helloext"</name>
+    <show_icon>true</show_icon>
+    <description>"click, then popup helloext"</description>
+    <version>0.1</version>
+    <request_api_version>1</request_api_version>
+    <author>teaera</author>
+</extension>

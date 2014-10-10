@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <id>com.teaera.helloext</id>
+    <name>helloext</name>
+    <show_icon>true</show_icon>
+    <description>This is the first Sogou explorer extension I made.</description>
+    <version>0.1</version>
+    <request_api_version>3</request_api_version>
+    <author>TeaEra</author>
+    
+    <popup page="popup.html" width="400" height="100"/>
+    <option page="option.html" width="200" height="200" />
+    <!--
+    <show_menu_dropdown>true</show_menu_dropdown>
+    -->
+    <background page="background.html"/>
+
+    <content_scripts>
+        <content_script core_type="webkit">
+            <match>http://*/*</match>
+            <css>webkit.css</css>
+            <js>webkit-start.js</js>
+        </content_script>
+    </content_scripts>
+</extension>

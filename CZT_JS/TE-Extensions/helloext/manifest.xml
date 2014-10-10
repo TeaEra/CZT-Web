@@ -5,13 +5,14 @@
     <show_icon>true</show_icon>
     <description>This is the first Sogou explorer extension I made.</description>
     <version>0.1</version>
-    <request_api_version>1</request_api_version>
+    <request_api_version>3</request_api_version>
     <author>TeaEra</author>
     
-    <popup page="popup.html" width="100" height="100"/>
+    <popup page="popup.html" width="400" height="100"/>
     <option page="option.html" width="200" height="200" />
-    <!-- no use-->
+    <!--
     <show_menu_dropdown>true</show_menu_dropdown>
+    -->
     <background page="background.html"/>
 
     <content_scripts>

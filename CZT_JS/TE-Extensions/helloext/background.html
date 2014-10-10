@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
 
     <script>
+        (function () {
+            "use strict";
+
+            var menu = {};
+            menu.normal_item = sogouExplorer.contextMenus.create(
+                {
+                    type: "normal",
+                    title: "Say hi",
+                    contexts: ["mainframe"],
+                    onclick: function (info, tab) {
+                        sogouExplorer.browserAction.showPopup();
+                    }
+                }
+            );
+            menu.separator_first = sogouExplorer.contextMenus.create(
+                {
+                    type: "separator",
+                    contexts: ["mainframe"]
+                }
+            );
+            menu.checkbox_item = sogouExplorer.contextMenus.create(
+                {
+                    type: "checkbox",
+                    title: "Check me",
+                    checked: false,
+                    contexts: ["mainframe"],
+                    onclick: function (info, tab) {
+                        // ??? will only change once
+                        sogouExplorer.contextMenus.update(menu.checkbox_item, {checked: (menu.checkbox_item.checked ? false : true)});
+                    }
+                }
+            );
+            menu.radio_item = sogouExplorer.contextMenus.create(
+                    {
+                        type: "radio",
+                        title: "Check me - radio",
+                        checked: false,
+                        contexts: ["mainframe"],
+                        onclick: function (info, tab) {
+                            // ??? will only change once
+                            sogouExplorer.contextMenus.update(menu.radio_item, {checked: (menu.radio_item.checked ? false : true)});
+                        }
+                    }
+            );
+        })();
     </script>
 </head>
 </html>

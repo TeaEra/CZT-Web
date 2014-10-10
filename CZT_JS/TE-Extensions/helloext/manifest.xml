@@ -7,6 +7,10 @@
     <version>0.1</version>
     <request_api_version>1</request_api_version>
     <author>teaera</author>
-
+    
     <popup page="popup.html" width="100" height="100"/>
+    <option page="option.html" width="200" height="200" />
+    <!-- no use-->
+    <show_menu_dropdown>true</show_menu_dropdown>
+    <background page="filename.html"/>
 </extension>

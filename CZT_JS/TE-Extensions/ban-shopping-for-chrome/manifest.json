@@ -13,8 +13,8 @@
     "content_scripts": [
         {
             "matches": [
-                "http://www.jd.com/",
-                "http://www.taobao.com/"
+                "*://*.jd.com/*",
+                "*://*.taobao.com/*"
             ],
             "js": ["ban-shopping.js"]
         }

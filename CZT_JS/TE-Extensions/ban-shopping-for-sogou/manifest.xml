@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <id>com.teaera.banshopping</id>
+    <name>banshopping</name>
+    <show_icon>true</show_icon>
+    <description></description>
+    <version>0.0.1</version>
+    <request_api_version>3</request_api_version>
+    <author>TeaEra</author>
+
+    <content_scripts>
+        <content_script core_type="webkit">
+            <match>*://*.jd.com/*</match>
+            <match>*://*.taobao.com/*</match>
+            <js>ban-shopping.js</js>
+        </content_script>
+    </content_scripts>
+</extension>

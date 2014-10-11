@@ -8,5 +8,15 @@
     "browser_action": {
         "default_icon": "te.png",
         "default_popup": "popup.html"
-    }
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.jd.com/",
+                "http://www.taobao.com/"
+            ],
+            "js": ["ban-shopping.js"]
+        }
+    ]
 }

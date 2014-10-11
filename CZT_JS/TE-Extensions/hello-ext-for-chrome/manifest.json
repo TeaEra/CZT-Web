@@ -8,5 +8,14 @@
     "browser_action": {
         "default_icon": "te.png",
         "default_popup": "popup.html"
-    }
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["start.js"]
+        }
+    ]
+
+
 }

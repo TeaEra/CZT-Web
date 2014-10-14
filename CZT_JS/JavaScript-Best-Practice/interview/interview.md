@@ -67,6 +67,34 @@ foo(2);
 - jQuery对id、class、tag的选取，以及对应的原生js对三者的选取？
 > Hint: 与css相关；
 
+- 对于js call和apply的认识？
+> Hint: 类似于适配器模式的一种运用
+```javascript
+var cat = {
+  type: "cat",
+  move: function () {
+    console.log(this.type + " moving");
+  }
+}
+var dog = {
+  type: "dog", 
+  move: function () {
+    // call or apply
+  }
+}
+cat.move();
+```
+
+- 原型链prototype的使用
+    + 将"123"分成["1", "2", "3"]，任何方法都可以
+    + 将["1", "2", "3"]合并成为"1 2 3"
+    + 将"123" -> "1 2 3"这个过程的方法加入String的原型链
+    + Hint:
+    ```javascript
+    var str = "123";
+    //
+    ```
+
 ------
 
 ### CSS
@@ -80,3 +108,5 @@ foo(2);
 - 对z-index的理解？
 
 - browser会自带样式，有时会影响预期效果，需要做什么样的准备工作，来去掉一些浏览器自带样式？
+
+- float和清除浮动？

@@ -29,7 +29,6 @@ functional programming;
 - HTML5规范的空模板？
 > Hint: 即平时为了避免重复性工作，写的模板文件，要包含doctype,head,body,title,Chinese encoding;
 > Extension: icon;
-> Link: [test page](html-html5-blank-template/blank.html)
 
 - script标签放在head和body的影响有何不同？
 > Link: [test page](js-script-position/1.html)

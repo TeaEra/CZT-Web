@@ -93,6 +93,11 @@ cat.move();
     ```javascript
     var str = "123";
     //
+    function add_space() {
+        // "123" -> ["1", "2", "3"]
+        // ["1", "2", ""3] -> "1 2 3"
+    }
+    // Add add_space to prototype of String
     ```
 
 ------

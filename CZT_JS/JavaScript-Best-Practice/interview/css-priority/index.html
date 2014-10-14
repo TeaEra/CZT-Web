@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>css priority</title>
+        
+        <link rel="stylesheet" type="text/css" href="index.css" />
+        <style>
+            div {
+                display: block;
+                height: 100px;
+                width: 100px;
+            }
+            
+            div#id-test-2 {
+                background-color: red;/**/
+                /*background-color: red !important;*/
+            }
+            
+            .class-test-2 {
+                background-color: green;
+            }
+            
+            #id-test-2 {
+                background-color: blue;
+            }
+            
+            .class-test-1 {
+                background-color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="id-test-1" class="class-test-1" style="background-color: black;">
+        </div>
+        
+        <div id="id-test-2" class="class-test-2" style="">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            url: "index.json",
+            type: "post",
+            data: "",
+            dataType: "json",
+            success: function (data, status, jqxhr) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+</html>

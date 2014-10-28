@@ -32,15 +32,15 @@
     };
 
     window.TEController.action_show_title = function () {
-        $(window.TEIDS.TITLE).html(window.TETemplate.tpl_title);
+        $(window.TEIDS.TITLE).html(window.TETemplate.tpl_title());
     };
 
     window.TEController.action_show_login = function () {
-        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_login);
+        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_login());
     };
 
     window.TEController.action_show_tag_buttons = function () {
-        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_tag_buttons);
+        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_tag_buttons());
     };
 
 })();

@@ -20,7 +20,7 @@
 
     //
     window.TEController.action_show_title();
-    //window.TEController.action_show_login();
+    window.TEController.action_show_login();
     //window.TEController.action_show_tag_buttons();
 
 })();

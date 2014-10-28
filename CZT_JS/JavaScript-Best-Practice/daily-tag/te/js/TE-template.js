@@ -21,13 +21,16 @@
     window.TETemplate.tpl_login = _.template('\
     <!-- -->\
     <div class="container">\
-        <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1">\
+        <div class="col-lg-3 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1">\
             <div class="form-group">\
+		<label>ID</label>\
                 <input class="form-control" type="text" placeholder="id" />\
             </div>\
             <div class="form-group">\
+		<label>PASSWORD</label>\
                 <input class="form-control" type="password" placeholder="password" />\
             </div>\
+	    <br />\
             <input class="btn btn-lg btn-info btn-block" type="submit" value="Login"/>\
         </div>\
     </div>\

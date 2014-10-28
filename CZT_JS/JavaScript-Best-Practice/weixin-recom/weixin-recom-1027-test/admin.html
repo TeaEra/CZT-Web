@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ADMIN TEST</title>
+
+    <link rel="stylesheet" href="lib/normalize/normalize.css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap-theme.min.css">
+
+    <!-- te-main -->
+    <link rel="stylesheet" href="css/te-main.css">
+
+</head>
+<body>
+
+    <!--
+    <div id="id-div-mask" class="div-mask">
+    </div>
+
+    <div id="id-umis-main-content">
+    </div>
+    -->
+
+    <div id="id-left-sidebar">
+        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 300px;">
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <div id="id-btn-sidebar" style="position: absolute; top: 0; right: 0; height: 100%; width: 26px; color: black; " class="text-center">
+                <i class="glyphicon glyphicon-arrow-left" style="margin: auto auto;"></i>
+            </div>
+        </div>
+    </div>
+    <div id="id-left-sidebar-switch" style="display: none;">
+        <div style="position: absolute; top: 0; left: 0; height: 100%; width: 50px;">
+            <div id="id-btn-sidebar-switch" style="position: absolute; top: 0; right: 0; height: 100%; width: 26px; color: black;" class="text-center">
+                <i class="glyphicon glyphicon-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+                <p>aaa</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <!-- underscore -->
+    <script src="lib/underscore/underscore-min.js"></script>
+    <!-- spin -->
+    <script src="lib/spin/spin.min.js"></script>
+    <!--
+    <script src="js/TE-template.js"></script>
+    <script src="js/TE-controller.js"></script>
+    <script src="js/TE-const.js"></script>
+    <script src="js/TE-init-umis.js"></script>
+    -->
+
+    <script>
+        $("#id-btn-sidebar").bind("click", function () {
+            $("#id-left-sidebar").fadeOut();
+            $("#id-left-sidebar-switch").fadeIn();
+        });
+        $("#id-btn-sidebar-switch").bind("click", function () {
+            $("#id-left-sidebar").fadeIn();
+            $("#id-left-sidebar-switch").fadeOut();
+        });
+
+        $("id-test-double-click").bind("click", function () {
+        });
+    </script>
+
+</body>
+</html>

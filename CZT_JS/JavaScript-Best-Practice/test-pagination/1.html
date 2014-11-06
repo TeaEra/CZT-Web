@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- -->
+    <link rel="stylesheet" href="../../libs/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../libs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <!-- -->
+    <script src="../../libs/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../libs/bower_components/underscore/underscore-min.js"></script>
+</head>
+<body>
+
+<div id="test-div"></div>
+
+<script>
+    "use strict";
+    window.total_num = 118788;
+    window.per_page = 20;
+    window.curr_num = 1;
+    window.page_num = Math.ceil(window.total_num / window.per_page);
+    window.tpl_pagination = _.template('\
+    <%\
+    var curr_num = arguments[0]["a"];\
+    var page_num = arguments[0]["b"];\
+    %>\
+    <!-- -->\
+    <div class="container">\
+        <div class="row text-center">\
+            <nav>\
+                <ul class="pager">\
+                <%\
+                if (curr_num != 0) {\
+                %>\
+                    <li id="id-admin-pager-previous"><a href="javascript:void(0);">Previous</a></li>\
+                <%\
+                }\
+                %>\
+                    <li>\
+                    &nbsp;&nbsp;\
+                    <p class="label label-info" style="font-size: 1.2em;">\
+                        <span id="id-admin-pager-curr-num"><%=curr_num+1 %></span> / <%=page_num %>\
+                    </p>\
+                    &nbsp;&nbsp;\
+                    </li>\
+                <%\
+                if (curr_num != page_num -1) {\
+                %>\
+                    <li id="id-admin-pager-next"><a href="javascript:void(0);">Next</a></li>\
+                <%\
+                }\
+                %>\
+                </ul>\
+            </nav>\
+        </div>\
+    </div>\
+    ');
+    $("#test-div").html(
+        window.tpl_pagination({"a": window.curr_num, "b": window.page_num})
+    );
+</script>
+</body>
+</html>

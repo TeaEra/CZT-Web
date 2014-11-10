@@ -1,0 +1,89 @@
+$orgWidth: 66px;
+$orgHeight: 66px;
+$ratio: 80%;
+$totalWidth: 330px;
+$currWidth: 0.8 * $orgWidth;
+$currHeight: 0.8 * $orgHeight;
+
+.size {
+  width: $orgWidth;
+  height: $orgHeight;
+}
+.size-2 {
+  width: #{$orgWidth} * #{$ratio};
+  height: #{$orgHeight} * #{$ratio};
+}
+.no-repeat {
+  background-repeat: no-repeat;
+}
+.ratio-size {
+  background-size: $ratio $ratio;
+}
+.img-1 {
+  background-image: url("share.png");
+}
+.img-2 {
+  background-image: url("share.png");
+  background-position: $orgWidth 0;
+}
+.img-3 {
+  background-image: url("share.png");
+  background-position: $orgWidth*2 0;
+}
+.img-4 {
+  background-image: url("share.png");
+  background-position: $orgWidth*3 0;
+}
+.img-5 {
+  background-image: url("share.png");
+  background-position: $orgWidth*4 0;
+}
+
+.test-1 {
+  width: $totalWidth;
+  height: $orgHeight;
+  background-image: url("share.png");
+  background-repeat: repeat-x;
+  background-size: $ratio $ratio;
+  background-position: 0 0;
+}
+.test-2 {
+  width: $totalWidth;
+  height: $orgHeight;
+  background-image: url("share.png");
+  background-repeat: repeat-x;
+  background-size: $ratio $ratio;
+  background-position: $currWidth 0;
+}
+.test-3 {
+  width: $totalWidth;
+  height: $orgHeight;
+  background-image: url("share.png");
+  background-repeat: repeat-x;
+  background-size: $ratio $ratio;
+  background-position: $currWidth*2 0;
+}
+.test-4 {
+  width: $totalWidth;
+  height: $orgHeight;
+  background-image: url("share.png");
+  background-repeat: repeat-x;
+  background-size: $ratio $ratio;
+  background-position: $currWidth*3 0;
+}
+.test-5 {
+  width: $totalWidth;
+  height: $orgHeight;
+  background-image: url("share.png");
+  background-repeat: repeat-x;
+  background-size: $ratio $ratio;
+  background-position: $currWidth*4 0;
+}
+.inner-test-1 {
+  width: $currWidth;
+  height: $currHeight;
+  overflow: hidden;
+}
+.outer-test-1 {
+  display: inline-block;
+}

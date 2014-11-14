@@ -37,3 +37,5 @@ a:hover .hidden-span {display: block;}
 
 .te-padding-bottom {padding-bottom: 0.5em;}
 .te-break-word {word-wrap: break-word;}
+
+.te-stripped {background-color: #f9f9f9}

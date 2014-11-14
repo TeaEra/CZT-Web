@@ -20,11 +20,15 @@ def get_keys():
 def get_mid():
     return fs['mid'].value
 
+def get_channel_list():
+    return fs['channel_list'].value
+
 def get_request():
     #
     mid = get_mid()
+    channel_list = get_channel_list()
     #
-    req_info = '{"needcatlist": true, "mid": "' + mid  + '", "action":1, "channel": "推荐", "channel_list": "收藏|娱乐|新闻"}'
+    req_info = '{"needcatlist": true, "mid": "' + mid  + '", "action":1, "channel": "推荐", "channel_list": "' + channel_list +'"}'
     return urllib.quote('req=' + req_info)
 
 def call_data():

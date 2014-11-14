@@ -136,6 +136,14 @@
         }
     };
 
+
+    /**
+     * Action:
+     *   get selected channels;
+     */
+    window.TEController.get_joined_selected_channels = function () {
+    };
+
     /**
      * [data]
      * Action:
@@ -150,8 +158,11 @@
             url: "cgi-bin/api_data.py",
             type: "post",
             /*contentType: "multipart/form-data",*/
-            //data: "mid='" + mid + "'",
-            data: "mid=" + mid,
+            //data: "mid=" + mid,
+            data: "mid=" + mid + "&channel_list=" 
+                + window.TEController.get_joined_channels(
+                    window.TEController.get_selected_channels()
+                ),
             dataType: "json",
             success: function (data, status, jqxhr) {
                 success_function(data);
@@ -380,8 +391,8 @@
      */
     window.TEController.get_joined_channels = function (channels) {
         var res = "";
-        if (! channels) {
-            return res;
+        if ((!channels) || channels.length === 0) {
+            return "推荐";
         }
         for (var idx in channels) {
             var curr_channel = channels[idx];

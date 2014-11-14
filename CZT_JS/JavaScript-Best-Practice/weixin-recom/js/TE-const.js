@@ -36,6 +36,7 @@
     window.TEIDS.UMIS_MAIN_CONTENT = "#id-umis-main-content";
     window.TEIDS.UMIS_ARTICLE_LIST = "#id-umis-article-list";
 
+    /**************************************************************************/
     // Save data
     window.objs = window.objs || {};
     //
@@ -44,6 +45,24 @@
     //
     // TODO: for 'user.html'; maybe, should be moved to 'TE-init-user.js';
     window.objs.user_curr_btn = window.TEIDS.USER_BTN_CLICK;
+    //
+    window.objs.default_filter_conditions = {
+        "channel": "HOT",
+        "status": "",
+        "key_wor_list": "",
+        "submitter": "",
+        //
+        "pub_time_start": "",
+        "pub_time_end": "",
+        "db_time_start": "",
+        "db_time_end": "",
+        "verify_time_start": "",
+        "verify_time_end": "",
+        "enable_time_start": "",
+        "enable_time_end": "",
+        "disable_time_start": "",
+        "disable_time_end": ""
+    };
     //
     // Categories and corresponding channesl;
     window.objs.CATEGORIES = [

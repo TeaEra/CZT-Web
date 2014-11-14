@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>UMIS</title>
+    <title>微信头条审核平台</title>
 
     <link rel="stylesheet" href="lib/normalize/normalize.css"/>
     <!-- Latest compiled and minified CSS -->
@@ -28,23 +28,40 @@
     <![endif]-->
 
     <style>
-        .te-padding-bottom {padding-bottom: 0.2em;}
-        .te-break-word {word-wrap: break-word;}
+    @media screen and (max-width: 1280px) {
+        #id-admin-main-content {font-size: 0.8em;}
+    }
+    @media screen and (min-width: 1281px) {
+        #id-admin-main-content {font-size: 0.9em;}
+    }
+    /*.article-time:hover .article-time-hover {display: block;}
+    .article-time:hover .article-time-init {display: none;}*/
+    .article-time-hover {display: none;}
     </style>
 </head>
 <body>
 
-    <div id="id-admin-navbar">
+    <div id="id-div-mask" class="div-mask">
     </div>
 
-    <div id="id-div-mask" class="div-mask">
+    <div id="id-btn-scroll-top" class="scroll-top">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+    </div>
+
+    <div id="id-admin-navbar">
     </div>
 
     <div id="id-admin-main-content">
     </div>
 
+    <div id="id-admin-pager">
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    -->
+    <script src="lib/jquery/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <!--<script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>-->
     <!-- custom -->
@@ -53,13 +70,12 @@
     <script src="lib/underscore/underscore-min.js"></script>
     <!-- spin -->
     <script src="lib/spin/spin.min.js"></script>
-    <!--
-    <script src="js/TE-template.js"></script>
-    <script src="js/TE-controller.js"></script>
-    <script src="js/TE-init-umis.js"></script>
-    -->
+    <!-- -->
     <script src="js/TE-const.js"></script>
+    <script src="js/TE-controller.js"></script>
+    <!-- -->
     <script src="js/TE-admin-template.js"></script>
+    <script src="js/TE-admin-controller.js"></script>
     <script src="js/TE-admin-init.js"></script>
 </body>
 </html>

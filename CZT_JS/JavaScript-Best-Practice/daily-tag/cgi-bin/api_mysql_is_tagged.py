@@ -17,8 +17,8 @@ def get_res():
     #
     time_type = fs["time_type"].value
     curr_date = fs["curr_date"].value
-    time_type = 1
-    curr_date = "2014-11-15"
+    #time_type = 1
+    #curr_date = "2014-11-15"
     #
     res = dict()
     #

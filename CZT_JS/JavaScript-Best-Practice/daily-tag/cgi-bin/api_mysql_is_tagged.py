@@ -28,11 +28,14 @@ def get_res():
         #
         select_sql = "select 1 from " + table
         where_sql = " where time > '" + curr_date + " 00:00:00'"\
-            + "and time < '" + curr_date + " 23:59:59'"
+            + " and time < '" + curr_date + " 23:59:59'"
         select_sql += where_sql
         #
-        print select_sql
-        #cur.execute(select_sql)
+        #print select_sql
+        cur.execute(select_sql)
+        all_data = cur.fetchall()
+        for row in all_data:
+            res["all_types"].append(row)
         #
         cur.close()
         conn.close()

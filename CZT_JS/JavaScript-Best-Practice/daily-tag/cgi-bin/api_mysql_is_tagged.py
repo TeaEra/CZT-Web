@@ -48,7 +48,7 @@ def get_res():
         res["message"] = e
     #
     return res
-    
+
 
 print "Content-Type: application/json; charset=utf-8"
 print

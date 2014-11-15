@@ -9,6 +9,7 @@ import MySQLdb
 class TE_DAILY_TAG(object):
 
 
+    @staticmethod
     def get_conn():
         #
         host = CONST.MYSQL_HOST
@@ -30,6 +31,7 @@ class TE_DAILY_TAG(object):
         return conn, cur
 
 
+    @staticmethod
     def get_table(time_type):
         #
         table = ""

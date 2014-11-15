@@ -27,9 +27,8 @@ def get_res():
         table = TE_DAILY_TAG.get_table(time_type)
         #
         select_sql = "select 1 from " + table
-        where_sql = " where time > '" + curr_date + " 00:00:00'"\
-            + " and time < '" + curr_date + " 23:59:59'"
-        select_sql += where_sql
+        where_sql = " where time > '%s 00:00:00' and time < '%s 23:59:59'"
+        select_sql += where_sql % (curr_date, curr_date)
         #
         #print select_sql
         cur.execute(select_sql)

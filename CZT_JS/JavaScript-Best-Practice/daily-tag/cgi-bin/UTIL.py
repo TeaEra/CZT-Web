@@ -4,6 +4,7 @@
 import CONST
 #
 import MySQLdb
+import MySQLdb.cursors
 
 
 class TE_DAILY_TAG(object):

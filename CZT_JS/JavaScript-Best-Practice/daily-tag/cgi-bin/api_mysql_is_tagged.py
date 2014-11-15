@@ -20,7 +20,7 @@ def get_res():
     curr_date = str(curr_date)
     #time_type = 1
     #print curr_date
-    curr_date = "2014-11-15"
+    #curr_date = "2014-11-15"
     #
     res = dict()
     #
@@ -29,7 +29,7 @@ def get_res():
         table = TE_DAILY_TAG.get_table(time_type)
         #
         select_sql = "select 1 from " + table
-        where_sql = " where time > '%s 00:00:00' and time < '%s 23:59:59'" % (curr_date, curr_date)
+        where_sql = " where time > '" + curr_date + " 00:00:00' and time < '" + curr_date + " 23:59:59'"
         select_sql += where_sql
         #
         #print select_sql

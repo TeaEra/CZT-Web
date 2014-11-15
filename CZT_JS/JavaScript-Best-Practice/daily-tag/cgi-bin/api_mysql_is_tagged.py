@@ -18,8 +18,8 @@ def get_res():
     time_type = fs["time_type"].value
     curr_date = fs["curr_date"].value
     #time_type = 1
-    print curr_date
-    curr_date = "2014-11-15"
+    #print curr_date
+    #curr_date = "2014-11-15"
     #
     res = dict()
     #
@@ -31,8 +31,8 @@ def get_res():
         where_sql = " where time > '%s 00:00:00' and time < '%s 23:59:59'"
         select_sql += where_sql % (curr_date, curr_date)
         #
-        print select_sql
-        #cur.execute(select_sql)
+        #print select_sql
+        cur.execute(select_sql)
         all_data = cur.fetchall()
         res["res"] = all_data
         #

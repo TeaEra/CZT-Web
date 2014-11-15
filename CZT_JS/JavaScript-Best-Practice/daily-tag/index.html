@@ -27,12 +27,22 @@
     <!-- Lib: underscore -->
     <script src="libs/underscore/underscore-min.js"></script>
     <!-- -->
-    <script src="te/js/TE-template.js"></script>
-    <!-- -->
-    <script src="te/js/TE-const.js"></script>
-    <!-- -->
-    <script src="te/js/TE-controller.js"></script>
-    <!-- -->
-    <script src="te/js/TE-init.js"></script>
+
+    <script>
+        var test = function () {
+            $.ajax({
+                url: "cgi-bin/api_mysql_is_tagged.py",
+                type: "post",
+                data: "time_type=1&curr_date=2014-11-15",
+                dataType: "json",
+                success: function (data, status, jqxhr) {
+                    console.log(data);
+                },
+                error: function (jqxhr, status, error) {
+                    alert(error);
+                }
+            });
+        };
+    </script>
 </body>
 </html>

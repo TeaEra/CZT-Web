@@ -34,8 +34,7 @@ def get_res():
         #print select_sql
         cur.execute(select_sql)
         all_data = cur.fetchall()
-        for row in all_data:
-            res["all_types"].append(row)
+        res["res"] = all_data
         #
         cur.close()
         conn.close()

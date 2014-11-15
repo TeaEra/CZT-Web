@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Happy birthday</title>
+
+    <!-- -->
+    <link rel="stylesheet" href="../../libs/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../libs/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+    <!-- -->
+    <script src="../../libs/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../libs/bower_components/underscore/underscore-min.js"></script>
+
+    <link rel="stylesheet" href="animate.css" />
+    <!-- -->
+    <style>
+        body {
+            background-color: pink;
+            color: #9400D3;
+            font-family: "MicroSoft YaHei";
+        }
+        .pink-lady {
+            background-color: pink;
+            height: 100%;
+            width: 100%;
+        }
+        .font-size {
+            font-size: 50em;
+        }
+        .init-hidden {
+            display: none;
+        }
+        .hbd {
+            background-image: url("Happy_Birthday_gif.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: -20%;
+        }
+    </style>
+</head>
+<body class="">
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="pink-lady text-center">
+                <div id="c1" class="init-hidden"><span class="font-size">祝</span></div>
+                <div id="c2" class="init-hidden"><span class="font-size">馨</span></div>
+                <div id="c3" class="init-hidden"><span class="font-size">月</span></div>
+                <div id="c4" class="init-hidden"><span class="font-size">生</span></div>
+                <div id="c5" class="init-hidden"><span class="font-size">日</span></div>
+                <div id="c6" class="init-hidden"><span class="font-size">快</span></div>
+                <div id="c7" class="init-hidden"><span class="font-size">乐</span></div>
+                <div id="c0" class="init-hidden"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    "use strict";
+    window.show = function () {
+        //
+        var c1 = "#c1";
+        var c2 = "#c2";
+        var c3 = "#c3";
+        var c4 = "#c4";
+        var c5 = "#c5";
+        var c6 = "#c6";
+        var c7 = "#c7";
+        var c0 = "#c0";
+        //
+        var e1 = "bounceInUp";
+        var e2 = "bounceInDown";
+        var e3 = "bounceInLeft";
+        var e4 = "bounceIn";
+        var e5 = "fadeIn";
+        var e6 = "zoomIn";
+        var e7 = "rollIn";
+        var e =  + " animated";
+        var lt = 1500;
+        window.setTimeout(function () {
+            $(c1).removeClass().addClass(e1 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                $(c1).removeClass();
+            });
+            window.setTimeout(function () {
+                $(c1).addClass("init-hidden");
+                $(c2).removeClass().addClass(e2 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $(c2).removeClass();
+                });
+                window.setTimeout(function () {
+                    $(c2).addClass("init-hidden");
+                    $(c3).removeClass().addClass(e3 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                        $(c3).removeClass();
+                    });
+                    window.setTimeout(function () {
+                        $(c3).addClass("init-hidden");
+                        $(c4).removeClass().addClass(e4 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                            $(c4).removeClass();
+                        });
+                        window.setTimeout(function () {
+                            $(c4).addClass("init-hidden");
+                            $(c5).removeClass().addClass(e5 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                                $(c5).removeClass();
+                            });
+                            window.setTimeout(function () {
+                                $(c5).addClass("init-hidden");
+                                $(c6).removeClass().addClass(e6 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                                    $(c6).removeClass();
+                                });
+                                window.setTimeout(function () {
+                                    $(c6).addClass("init-hidden");
+                                    $(c7).removeClass().addClass(e7 + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                                        $(c7).removeClass();
+                                    });
+                                    window.setTimeout(function () {
+                                        $(c7).addClass("init-hidden");
+                                        $("body").addClass("hbd");
+                                    }, lt);
+                                }, lt);
+                            }, lt);
+                        }, lt);
+                    }, lt);
+                }, lt);
+            }, lt);
+        }, 100);
+
+    };
+    window.show();
+</script>
+</body>
+</html>

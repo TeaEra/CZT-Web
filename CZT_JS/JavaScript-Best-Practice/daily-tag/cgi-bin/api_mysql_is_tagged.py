@@ -17,6 +17,7 @@ def get_res():
     #
     time_type = fs["time_type"].value
     curr_date = fs["curr_date"].value
+    curr_date = str(curr_date)
     #time_type = 1
     #print curr_date
     #curr_date = "2014-11-15"

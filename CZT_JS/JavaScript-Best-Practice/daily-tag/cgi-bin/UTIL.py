@@ -36,13 +36,13 @@ class TE_DAILY_TAG(object):
     def get_table(time_type):
         #
         table = ""
-        if time_type == 1:
+        if time_type == "1":
             table = CONST.TABLE_TIME_1
-        elif time_type == 2:
+        elif time_type == "2":
             table = CONST.TABLE_TIME_2
-        elif time_type == 3:
+        elif time_type == "3":
             table = CONST.TABLE_TIME_3
-        elif time_type == 4:
+        elif time_type == "4":
             table = CONST.TABLE_TIME_4
         #
         return table

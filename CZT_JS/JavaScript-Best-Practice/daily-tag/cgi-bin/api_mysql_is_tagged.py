@@ -29,7 +29,7 @@ def get_res():
         table = TE_DAILY_TAG.get_table(time_type)
         #
         select_sql = "select 1 from " + table
-        where_sql = " where time >= unix_timestamp(%s) and time <= unix_timestamp(%s)" % (curr_date + " 00:00:00", curr_date + " 23:59:59")
+        where_sql = " where unix_timestamp(time) >= unix_timestamp(%s) and unix_timestamp(time) <= unix_timestamp(%s)" % (curr_date + " 00:00:00", curr_date + " 23:59:59")
         select_sql += where_sql
         #
         #print select_sql

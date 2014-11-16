@@ -9,6 +9,7 @@
     window.TEIDS = window.TEIDS || {};
 
     // TEIDS
+    window.TEIDS.NAVBAR = "#id-navbar";
     window.TEIDS.TITLE = "#id-title";
     window.TEIDS.CONTENT = "#id-content";
 

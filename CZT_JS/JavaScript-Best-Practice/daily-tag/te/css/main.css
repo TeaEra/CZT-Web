@@ -1,3 +1,8 @@
 * {font-family: "Microsoft YaHei"}
 body {padding-top: 60px;}
+
 .well-border-1 {background: #2aabd2; color: white; border: 1px solid white; border-radius: 5px; -webkit-border-radius: 5px;}
+
+.fs5 {font-size: 5em;}
+.fs3 {font-size: 3em;}
+.w100 {width: 100%;}

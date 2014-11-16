@@ -50,4 +50,58 @@
     <br />\
     ');
 
+    window.TETemplate.tpl_am = _.template('\
+    <!-- -->\
+    <div class="container">\
+        <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
+            <div class="row">\
+                <p class="text-center">\
+                    <span id="id-btn-time-2" \
+                        class="btn btn-info fs3 w100" \
+                        type="button">\
+                        出门了\
+                    </span>\
+                </p>\
+            </div>\
+            <br />\
+            <div class="row">\
+                <p class="text-center">\
+                    <span id="id-btn-time-2" \
+                        class="btn btn-primary fs3 w100" \
+                        type="button">\
+                        到工位\
+                    </span>\
+                </p>\
+            </div>\
+        </div>\
+    </div>\
+    ');
+
+    window.TETemplate.tpl_pm = _.template('\
+    <!-- -->\
+    <div class="container">\
+        <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
+            <div class="row">\
+                <p class="text-center">\
+                    <span id="id-btn-time-3" \
+                        class="btn btn-warning fs3 w100" \
+                        type="button">\
+                        下班了\
+                    </span>\
+                </p>\
+            </div>\
+            <br />\
+            <div class="row">\
+                <p class="text-center">\
+                    <span id="id-btn-time-4" \
+                        class="btn btn-success fs3 w100" \
+                        type="button">\
+                        到家了\
+                    </span>\
+                </p>\
+            </div>\
+        </div>\
+    </div>\
+    ');
+
 })();

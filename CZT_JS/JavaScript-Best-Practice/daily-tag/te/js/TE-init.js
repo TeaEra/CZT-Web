@@ -19,8 +19,30 @@
     console.log(day_list.length);
 
     //
-    window.TEController.action_show_title();
-    window.TEController.action_show_login();
+    //window.TEController.action_show_title();
+    //window.TEController.action_show_login();
     //window.TEController.action_show_tag_buttons();
+
+    window.objs = window.objs || {};
+
+    var curr_date = today.getDate();
+    window.objs.str_date = curr_year + "-" + (curr_month+1) + "-" + curr_date;
+    window.objs.is_tagged_list = new Array();
+
+    var hour = today.getHours();
+    //
+    window.TEController.action_show_navbar();
+    if (hour < 12) {
+        window.TEController.action_show_am();
+    }
+    else {
+        window.TEController.action_show_pm();
+    }
+
+    //
+    window.TEController.api_check_tagged(1);
+    window.TEController.api_check_tagged(2);
+    window.TEController.api_check_tagged(3);
+    window.TEController.api_check_tagged(4);
 
 })();

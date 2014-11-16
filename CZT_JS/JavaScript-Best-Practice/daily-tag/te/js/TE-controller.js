@@ -31,6 +31,10 @@
         }
     };
 
+    window.TEController.action_show_navbar = function () {
+        $(window.TEIDS.NAVBAR).html(window.TEV.tpl_navbar());
+    };
+
     window.TEController.action_show_title = function () {
         $(window.TEIDS.TITLE).html(window.TETemplate.tpl_title());
     };
@@ -41,6 +45,29 @@
 
     window.TEController.action_show_tag_buttons = function () {
         $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_tag_buttons());
+    };
+
+    window.TEController.action_show_am = function () {
+        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_am());
+    };
+
+    window.TEController.action_show_pm = function () {
+        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_pm());
+    };
+
+    window.TEController.api_check_tagged = function (time_type) {
+        $.ajax({
+            url: "cgi-bin/api_mysql_is_tagged.py",
+            type: "post",
+            data: "time_type=" + time_type + "&curr_date" + window.objs.str_date,
+            dataType: "json",
+            success: function (data, status, jqxhr) {
+                console.log(data);
+            },
+            error: function (jqxhr, status, error) {
+                alert(error);
+            }
+        });
     };
 
 })();

@@ -66,14 +66,12 @@
             </div>\
             <br />\
             <div class="row">\
-                <p class="text-center">\
-                    <span id="id-btn-time-2" \
-                        class="btn btn-primary fs3 w100 pad-style-1" \
-                        type="button" \
-                        <%=(window.objs.is_tagged_list[2]?"disabled":"") %>>\
-                        到工位\
-                    </span>\
-                </p>\
+                <button id="id-btn-time-2" \
+                    class="btn btn-primary fs3 w100 pad-style-1" \
+                    type="button" \
+                    <%=(window.objs.is_tagged_list[2]?"disabled":"") %>>\
+                    到工位\
+                </button>\
             </div>\
         </div>\
     </div>\
@@ -84,14 +82,12 @@
     <div class="container">\
         <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
             <div class="row">\
-                <p class="text-center">\
-                    <span id="id-btn-time-3" \
-                        class="btn btn-warning fs3 w100 pad-style-1" \
-                        type="button" \
-                        <%=(window.objs.is_tagged_list[3]?"disabled":"") %>>\
-                        下班了\
-                    </span>\
-                </p>\
+                <button id="id-btn-time-3" \
+                    class="btn btn-warning fs3 w100 pad-style-1" \
+                    type="button" \
+                    <%=(window.objs.is_tagged_list[3]?"disabled":"") %>>\
+                    下班了\
+                </button>\
             </div>\
             <br />\
             <div class="row">\

@@ -65,12 +65,47 @@
             data: "time_type=" + time_type + "&curr_date=" + window.objs.str_date,
             dataType: "json",
             success: function (data, status, jqxhr) {
-                console.log(data);
+                //console.log(data);
+                //
+                var res = data["res"];
+                if (res.length === 0) {
+                    window.objs.is_tagged_list[time_type] = false;
+                }
+                else {
+                    window.objs.is_tagged_list[time_type] = true;
+                }
             },
             error: function (jqxhr, status, error) {
                 alert(error);
             }
         });
+    };
+
+    /**
+     * Check 4 kinds of time
+     */
+    window.TEController.check_tagged = function () {
+        //
+        window.TEController.api_check_tagged(1);
+        window.TEController.api_check_tagged(2);
+        window.TEController.api_check_tagged(3);
+        window.TEController.api_check_tagged(4);
+    };
+
+    /**
+     *
+     */
+    window.TEController.init_index = function () {
+        //
+        window.TEController.check_tagged();
+        //
+        window.TEController.action_show_navbar();
+        if (window.objs.today["hour"] < 12) {
+            window.TEController.action_show_am();
+        }
+        else {
+            window.TEController.action_show_pm();
+        }
     };
 
 })();

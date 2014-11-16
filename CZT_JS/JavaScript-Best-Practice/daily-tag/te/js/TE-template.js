@@ -56,9 +56,10 @@
         <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
             <div class="row">\
                 <p class="text-center">\
-                    <span id="id-btn-time-2" \
+                    <span id="id-btn-time-1" \
                         class="btn btn-info fs3 w100" \
-                        type="button">\
+                        type="button" \
+                        <%=window.objs.is_tagged_list[1] ? "disabled=\"true\"": ""%>>\
                         出门了\
                     </span>\
                 </p>\
@@ -68,7 +69,8 @@
                 <p class="text-center">\
                     <span id="id-btn-time-2" \
                         class="btn btn-primary fs3 w100" \
-                        type="button">\
+                        type="button" \
+                        <%=window.objs.is_tagged_list[2] ? "disabled=\"true\"": ""%>>\
                         到工位\
                     </span>\
                 </p>\
@@ -85,7 +87,8 @@
                 <p class="text-center">\
                     <span id="id-btn-time-3" \
                         class="btn btn-warning fs3 w100" \
-                        type="button">\
+                        type="button" \
+                        <%=window.objs.is_tagged_list[3] ? "disabled=\"true\"": ""%>>\
                         下班了\
                     </span>\
                 </p>\
@@ -95,7 +98,8 @@
                 <p class="text-center">\
                     <span id="id-btn-time-4" \
                         class="btn btn-success fs3 w100" \
-                        type="button">\
+                        type="button" \
+                        <%=window.objs.is_tagged_list[4] ? "disabled=\"true\"": ""%>>\
                         到家了\
                     </span>\
                 </p>\

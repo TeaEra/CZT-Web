@@ -30,19 +30,8 @@
     window.objs.is_tagged_list = new Array();
 
     var hour = today.getHours();
-    //
-    window.TEController.action_show_navbar();
-    if (hour < 12) {
-        window.TEController.action_show_am();
-    }
-    else {
-        window.TEController.action_show_pm();
-    }
-
-    //
-    window.TEController.api_check_tagged(1);
-    window.TEController.api_check_tagged(2);
-    window.TEController.api_check_tagged(3);
-    window.TEController.api_check_tagged(4);
+    window.objs.today = {
+        "hour": hour
+    };
 
 })();

@@ -31,6 +31,47 @@
         }
     };
 
+    /**
+     * Effect:
+     *   loading while ajax call;
+     */
+    window.TEController.add_loading_effect = function () {
+        //
+        // Spin settings;
+        var opts = {
+            lines: 13, // The number of lines to draw
+            length: 20, // The length of each line
+            width: 10, // The line thickness
+            radius: 30, // The radius of the inner circle
+            corners: 1, // Corner roundness (0..1)
+            rotate: 0, // The rotation offset
+            direction: 1, // 1: clockwise, -1: counterclockwise
+            color: '#000', // #rgb or #rrggbb or array of colors
+            speed: 1, // Rounds per second
+            trail: 60, // Afterglow percentage
+            shadow: false, // Whether to render a shadow
+            hwaccel: false, // Whether to use hardware acceleration
+            className: 'spinner', // The CSS class to assign to the spinner
+            zIndex: 2e9, // The z-index (defaults to 2000000000)
+            top: '50%', // Top position relative to parent
+            left: '50%' // Left position relative to parent
+        };
+        var spin_target = document.getElementsByTagName('body')[0];
+        var spinner = new Spinner(opts);
+        //
+        // Add ajax loading effect;
+        $(document).on({
+            ajaxStart: function() {
+                $("#id-div-mask").addClass("display-block");
+                spinner.spin(spin_target);
+            },
+            ajaxStop: function() {
+                spinner.spin();
+                $("#id-div-mask").removeClass("display-block");
+            }
+        });
+    };
+
     window.TEController.action_show_navbar = function () {
         $(window.TEIDS.NAVBAR).html(window.TEV.tpl_navbar());
     };
@@ -81,6 +122,37 @@
         });
     };
 
+    window.TEController.api_tag = function (time_type, user) {
+        $.ajax({
+            url: "cgi-bin/api_mysql_tag.py",
+            type: "post",
+            data: window.TEController.data_for_api_tag(time_type, user),
+            dataType: "json",
+            success: function (data, status, jqxhr) {
+                //
+            },
+            error: function (jqxhr, status, error) {
+                alert(error);
+            }
+        });
+    };
+
+    window.TEController.data_for_api_tag = function (time_type, user) {
+        //
+        var today = new Date();
+        var y = today.getFullYear();
+        var m = today.getMonth() + 1;  // 0-11
+        var d = today.getDate();
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        var str_date =
+            y + "-" + m + "-" + d
+            + " " + hour + ":" + min + ":" + sec;
+        return "time_type=" + time_type
+            + "&user=teaera" + "&curr_date=" + str_date;
+    };
+
     /**
      * Check 4 kinds of time
      */
@@ -97,14 +169,52 @@
      */
     window.TEController.init_index = function () {
         //
-        window.TEController.check_tagged();
-        //
         window.TEController.action_show_navbar();
+        //
+        window.TEController.add_loading_effect();
+        //
+        window.TEController.check_tagged();
         if (window.objs.today["hour"] < 12) {
             window.TEController.action_show_am();
+            if (window.objs.is_tagged_list[1]) {
+                //
+                $(window.TEIDS.TIME_1).bind(
+                    "click",
+                    function () {
+                        window.TEController.api_tag(1, "teaera");
+                    }
+                );
+            }
+            if (window.objs.is_tagged_list[2]) {
+                //
+                $(window.TEIDS.TIME_2).bind(
+                    "click",
+                    function () {
+                        window.TEController.api_tag(2, "teaera");
+                    }
+                );
+            }
         }
         else {
             window.TEController.action_show_pm();
+            if (window.objs.is_tagged_list[3]) {
+                //
+                $(window.TEIDS.TIME_3).bind(
+                    "click",
+                    function () {
+                        window.TEController.api_tag(3, "teaera");
+                    }
+                );
+            }
+            if (window.objs.is_tagged_list[4]) {
+                //
+                $(window.TEIDS.TIME_4).bind(
+                    "click",
+                    function () {
+                        window.TEController.api_tag(4, "teaera");
+                    }
+                );
+            }
         }
     };
 

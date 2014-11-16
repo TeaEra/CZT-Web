@@ -57,7 +57,7 @@
             <div class="row">\
                 <p class="text-center">\
                     <span id="id-btn-time-1" \
-                        class="btn btn-info fs3 w100" \
+                        class="btn btn-info fs3 w100 pad-style-1" \
                         type="button" \
                         <%=(window.objs.is_tagged_list[1]?"disabled":"") %>>\
                         出门了\
@@ -68,7 +68,7 @@
             <div class="row">\
                 <p class="text-center">\
                     <span id="id-btn-time-2" \
-                        class="btn btn-primary fs3 w100" \
+                        class="btn btn-primary fs3 w100 pad-style-1" \
                         type="button" \
                         <%=(window.objs.is_tagged_list[2]?"disabled":"") %>>\
                         到工位\
@@ -86,7 +86,7 @@
             <div class="row">\
                 <p class="text-center">\
                     <span id="id-btn-time-3" \
-                        class="btn btn-warning fs3 w100" \
+                        class="btn btn-warning fs3 w100 pad-style-1" \
                         type="button" \
                         <%=(window.objs.is_tagged_list[3]?"disabled":"") %>>\
                         下班了\
@@ -97,7 +97,7 @@
             <div class="row">\
                 <p class="text-center">\
                     <span id="id-btn-time-4" \
-                        class="btn btn-success fs3 w100" \
+                        class="btn btn-success fs3 w100 pad-style-1" \
                         type="button" \
                         <%=(window.objs.is_tagged_list[4]?"disabled":"") %>>\
                         到家了\

@@ -48,6 +48,6 @@ def get_res():
     return res
 
 
-#print "Content-Type: application/json; charset=utf-8"
+print "Content-Type: application/json; charset=utf-8"
 print
 print(json.dumps(get_res()))

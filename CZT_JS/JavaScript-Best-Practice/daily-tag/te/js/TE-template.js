@@ -88,7 +88,7 @@
                     <span id="id-btn-time-3" \
                         class="btn btn-warning fs3 w100" \
                         type="button" \
-                        <%=(window.objs.is_tagged_list[3]?"disabled=\"true\"":"") %>>\
+                        <%=(window.objs.is_tagged_list[3]===true?"disabled=\"disabled\"":"") %>>\
                         下班了\
                     </span>\
                 </p>\
@@ -99,7 +99,7 @@
                     <span id="id-btn-time-4" \
                         class="btn btn-success fs3 w100" \
                         type="button" \
-                        <%=(window.objs.is_tagged_list[4]?"disabled=\"true\"":"") %>>\
+                        >\
                         到家了\
                     </span>\
                 </p>\

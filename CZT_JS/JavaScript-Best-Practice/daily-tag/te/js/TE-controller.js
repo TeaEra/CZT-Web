@@ -59,6 +59,9 @@
         $.ajax({
             url: "cgi-bin/api_mysql_is_tagged.py",
             type: "post",
+            //
+            async: false,
+            //
             data: "time_type=" + time_type + "&curr_date=" + window.objs.str_date,
             dataType: "json",
             success: function (data, status, jqxhr) {

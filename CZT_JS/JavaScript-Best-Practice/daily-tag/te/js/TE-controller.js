@@ -148,7 +148,7 @@
         var sec = today.getSeconds();
         var str_date =
             y + "-" + m + "-" + d
-            + " " + hour + ":" + min + ":" + sec;
+            + "T" + hour + ":" + min + ":" + sec;
         return "time_type=" + time_type
             + "&user=teaera" + "&curr_date=" + str_date;
     };

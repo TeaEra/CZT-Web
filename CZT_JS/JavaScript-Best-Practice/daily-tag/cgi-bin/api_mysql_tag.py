@@ -31,8 +31,8 @@ def get_res():
         insert_sql = "insert into " + table + "(user, time)"
         insert_sql += " values ('%s', '%s')" % (user, curr_date)
         #
-        #print insert_sql
-        cur.execute(insert_sql)
+        print insert_sql
+        #cur.execute(insert_sql)
         #
         cur.close()
         conn.close()

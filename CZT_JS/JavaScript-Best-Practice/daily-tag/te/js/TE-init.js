@@ -34,4 +34,6 @@
         "hour": hour
     };
 
+    window.TEController.init_index();
+
 })();

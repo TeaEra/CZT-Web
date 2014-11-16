@@ -88,7 +88,7 @@
                     <span id="id-btn-time-3" \
                         class="btn btn-warning fs3 w100" \
                         type="button" \
-                        disable="<%=(window.objs.is_tagged_list[3]?"disabled":"") %>">\
+                        disabled="<%=(window.objs.is_tagged_list[3]?"disabled":"") %>">\
                         下班了\
                     </span>\
                 </p>\

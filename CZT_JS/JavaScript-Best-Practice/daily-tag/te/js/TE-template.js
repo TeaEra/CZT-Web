@@ -62,7 +62,7 @@
                 <button id="id-btn-time-1" \
                     class="btn <%=is_show_1?"btn-info":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(is_show_1?"disabled":"") %>>\
+                    <%=(is_show_1?"":"disabled") %>>\
                     出门了\
                 </button>\
             </div>\
@@ -71,7 +71,7 @@
                 <button id="id-btn-time-2" \
                     class="btn <%=is_show_2?"btn-primary":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(is_show_2?"disabled":"") %>>\
+                    <%=(is_show_2?"":"disabled") %>>\
                     到工位\
                 </button>\
             </div>\
@@ -91,7 +91,7 @@
                 <button id="id-btn-time-3" \
                     class="btn <%=is_show_3?"btn-warning":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(is_show_3?"disabled":"") %>>\
+                    <%=(is_show_3?"":"disabled") %>>\
                     下班了\
                 </button>\
             </div>\
@@ -100,7 +100,7 @@
                 <button id="id-btn-time-4" \
                     class="btn <%=is_show_4?"btn-success":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(is_show_4?"disabled":"") %>>\
+                    <%=(is_show_4?"":"disabled") %>>\
                     到家了\
                 </button>\
             </div>\

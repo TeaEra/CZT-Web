@@ -33,6 +33,7 @@ def get_res():
         #
         #print insert_sql
         cur.execute(insert_sql)
+        conn.commit()
         #
         cur.close()
         conn.close()

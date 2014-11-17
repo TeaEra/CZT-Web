@@ -130,6 +130,10 @@
             dataType: "json",
             success: function (data, status, jqxhr) {
                 //
+                if (time_type === 1) {}
+                else if (time_type === 2) {}
+                else if (time_type === 3) {}
+                else if (time_type === 4) {}
             },
             error: function (jqxhr, status, error) {
                 alert(error);
@@ -176,7 +180,7 @@
         window.TEController.check_tagged();
         if (window.objs.today["hour"] < 12) {
             window.TEController.action_show_am();
-            if (window.objs.is_tagged_list[1]) {
+            if (window.objs.is_tagged_list[1] === false) {
                 //
                 $(window.TEIDS.TIME_1).bind(
                     "click",
@@ -185,7 +189,7 @@
                     }
                 );
             }
-            if (window.objs.is_tagged_list[2]) {
+            if (window.objs.is_tagged_list[2] === false) {
                 //
                 $(window.TEIDS.TIME_2).bind(
                     "click",
@@ -197,20 +201,22 @@
         }
         else {
             window.TEController.action_show_pm();
-            if (window.objs.is_tagged_list[3]) {
+            if (window.objs.is_tagged_list[3] === false) {
                 //
                 $(window.TEIDS.TIME_3).bind(
                     "click",
                     function () {
+                        console.log(3);
                         window.TEController.api_tag(3, "teaera");
                     }
                 );
             }
-            if (window.objs.is_tagged_list[4]) {
+            if (window.objs.is_tagged_list[4] === false) {
                 //
                 $(window.TEIDS.TIME_4).bind(
                     "click",
                     function () {
+                        console.log(4);
                         window.TEController.api_tag(4, "teaera");
                     }
                 );

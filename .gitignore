@@ -8,3 +8,4 @@
 *.cssc
 
 nohup.out
+*.pyc

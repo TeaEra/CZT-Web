@@ -52,8 +52,8 @@
 
     window.TETemplate.tpl_am = _.template('\
     <%\
-    var is_show_1 = window.objs.is_tagged_list[1];\
-    var is_show_2 = window.objs.is_tagged_list[2];\
+    var is_show_1 = (window.objs.is_tagged_list[1] === false);\
+    var is_show_2 = (window.objs.is_tagged_list[2] === false);\
     %>\
     <!-- -->\
     <div class="container">\
@@ -81,8 +81,8 @@
 
     window.TETemplate.tpl_pm = _.template('\
     <%\
-    var is_show_3 = window.objs.is_tagged_list[3];\
-    var is_show_4 = window.objs.is_tagged_list[4];\
+    var is_show_3 = (window.objs.is_tagged_list[3] === false);\
+    var is_show_4 = (window.objs.is_tagged_list[4] === false);\
     %>\
     <!-- -->\
     <div class="container">\

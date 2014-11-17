@@ -51,23 +51,27 @@
     ');
 
     window.TETemplate.tpl_am = _.template('\
+    <%\
+    var is_show_1 = window.objs.is_tagged_list[1];\
+    var is_show_2 = window.objs.is_tagged_list[2];\
+    %>\
     <!-- -->\
     <div class="container">\
         <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
             <div class="row">\
                 <button id="id-btn-time-1" \
-                    class="btn btn-info fs3 w100 pad-style-1" \
+                    class="btn <%=is_show_1?"btn-info":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(window.objs.is_tagged_list[1]?"disabled":"") %>>\
+                    <%=(is_show_1?"disabled":"") %>>\
                     出门了\
                 </button>\
             </div>\
             <br />\
             <div class="row">\
                 <button id="id-btn-time-2" \
-                    class="btn btn-primary fs3 w100 pad-style-1" \
+                    class="btn <%=is_show_2?"btn-primary":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(window.objs.is_tagged_list[2]?"disabled":"") %>>\
+                    <%=(is_show_2?"disabled":"") %>>\
                     到工位\
                 </button>\
             </div>\
@@ -76,23 +80,27 @@
     ');
 
     window.TETemplate.tpl_pm = _.template('\
+    <%\
+    var is_show_3 = window.objs.is_tagged_list[3];\
+    var is_show_4 = window.objs.is_tagged_list[4];\
+    %>\
     <!-- -->\
     <div class="container">\
         <div class="<%=window.TEV.get_cols(5) %> <%=window.TEV.get_offset_cols(1) %>">\
             <div class="row">\
                 <button id="id-btn-time-3" \
-                    class="btn btn-warning fs3 w100 pad-style-1" \
+                    class="btn <%=is_show_3?"btn-warning":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(window.objs.is_tagged_list[3]?"disabled":"") %>>\
+                    <%=(is_show_3?"disabled":"") %>>\
                     下班了\
                 </button>\
             </div>\
             <br />\
             <div class="row">\
                 <button id="id-btn-time-4" \
-                    class="btn btn-success fs3 w100 pad-style-1" \
+                    class="btn <%=is_show_4?"btn-success":"btn-default" %> fs3 w100 pad-style-1" \
                     type="button" \
-                    <%=(window.objs.is_tagged_list[4]?"disabled":"") %>>\
+                    <%=(is_show_4?"disabled":"") %>>\
                     到家了\
                 </button>\
             </div>\

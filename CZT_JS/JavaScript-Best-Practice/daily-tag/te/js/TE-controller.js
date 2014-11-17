@@ -130,10 +130,26 @@
             dataType: "json",
             success: function (data, status, jqxhr) {
                 //
-                if (time_type === 1) {}
-                else if (time_type === 2) {}
-                else if (time_type === 3) {}
-                else if (time_type === 4) {}
+                if (time_type === 1) {
+                    $(window.TEIDS.TIME_1).attr("disabled", "disabled");
+                    $(window.TEIDS.TIME_1).toggleClass("btn-info");
+                    $(window.TEIDS.TIME_1).toggleClass("btn-default");
+                }
+                else if (time_type === 2) {
+                    $(window.TEIDS.TIME_2).attr("disabled", "disabled");
+                    $(window.TEIDS.TIME_2).toggleClass("btn-primary");
+                    $(window.TEIDS.TIME_2).toggleClass("btn-default");
+                }
+                else if (time_type === 3) {
+                    $(window.TEIDS.TIME_3).attr("disabled", "disabled");
+                    $(window.TEIDS.TIME_3).toggleClass("btn-warning");
+                    $(window.TEIDS.TIME_3).toggleClass("btn-default");
+                }
+                else if (time_type === 4) {
+                    $(window.TEIDS.TIME_4).attr("disabled", "disabled");
+                    $(window.TEIDS.TIME_4).toggleClass("btn-success");
+                    $(window.TEIDS.TIME_4).toggleClass("btn-default");
+                }
             },
             error: function (jqxhr, status, error) {
                 alert(error);

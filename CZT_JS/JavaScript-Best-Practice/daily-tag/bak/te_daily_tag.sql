@@ -44,3 +44,9 @@ INSERT INTO te_time_3(user, time)
 --
 INSERT INTO te_time_4(user, time)
  VALUES ('teaera', NOW());
+
+-- Clear data;
+DELETE FROM te_time_1;
+DELETE FROM te_time_2;
+DELETE FROM te_time_3;
+DELETE FROM te_time_4;

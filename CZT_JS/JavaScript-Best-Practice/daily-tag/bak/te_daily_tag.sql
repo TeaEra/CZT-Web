@@ -32,6 +32,8 @@ CREATE TABLE te_time_4(
     time DATETIME DEFAULT NULL
 );
 
+--------------------------------------------------------------------------------
+
 -- insert test datetime;
 INSERT INTO te_time_1(user, time)
  VALUES ('teaera', NOW());

@@ -96,6 +96,22 @@
         $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_pm());
     };
 
+    window.TEController.action_show_today = function () {
+        //
+        $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_today());
+        //
+        var settings = {
+            minuteStep: 1,
+            showSeconds: false,
+            showMeridian: false,
+            defaultTime: false
+        };
+        $(window.TEIDS.INPUT_TIME_1).timepicker(settings);
+        $(window.TEIDS.INPUT_TIME_2).timepicker(settings);
+        $(window.TEIDS.INPUT_TIME_3).timepicker(settings);
+        $(window.TEIDS.INPUT_TIME_4).timepicker(settings);
+    };
+
     window.TEController.api_check_tagged = function (time_type) {
         $.ajax({
             url: "cgi-bin/api_mysql_is_tagged.py",

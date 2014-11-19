@@ -73,7 +73,43 @@
     };
 
     window.TEController.action_show_navbar = function () {
-        $(window.TEIDS.NAVBAR).html(window.TEV.tpl_navbar());
+        //
+        var id_nav_tag_me = "id-nav-tag-me";
+        var id_nav_today = "id-nav-today";
+        var nav_list = new Array();
+        nav_list.push("#" + id_nav_tag_me);
+        nav_list.push("#" + id_nav_today);
+        //
+        var info = {
+            "title": "Daily tag",
+            "navs": [
+                {
+                    "id": id_nav_tag_me,
+                    "text": "TAG-ME"
+                },
+                {
+                    "id": id_nav_today,
+                    "text": "MY-DAY"
+                }
+            ]
+        };
+        //
+        $(window.TEIDS.NAVBAR).html(
+            window.TEV.tpl_navbar(
+                info
+            )
+        );
+        //
+        $("#" + id_nav_tag_me).bind(
+            "click",
+            window.TEController.show_tag_me
+        );
+        $("#" + id_nav_today).bind(
+            "click",
+            window.TEController.show_today
+        );
+        //
+        window.TEC.effect_click_nav_btn(nav_list);
     };
 
     window.TEController.action_show_title = function () {
@@ -96,7 +132,7 @@
         $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_pm());
     };
 
-    window.TEController.action_show_today = function () {
+    window.TEController.show_today = function () {
         //
         $(window.TEIDS.CONTENT).html(window.TETemplate.tpl_today());
         //
@@ -208,6 +244,11 @@
         window.TEController.action_show_navbar();
         //
         window.TEController.add_loading_effect();
+        //
+        $("#id-nav-tag-me").click();
+    };
+
+    window.TEController.show_tag_me = function () {
         //
         window.TEController.check_tagged();
         if (window.objs.today["hour"] < 12) {

@@ -70,9 +70,25 @@
     </div>\
     ');
 
-    //
+    /**
+     * navbar format:
+     * {
+     *  title: "",
+     *  navs: [
+     *      {
+     *          id: "",
+     *          text: ""
+     *      },
+     *      ...
+     *  ]
+     * }
+     *
+     */
     window.TEV.tpl_navbar = _.template('\
     <%\
+    var navbar = arguments[0];\
+    var brand_title = navbar["title"];\
+    var navs = navbar["navs"];\
     %>\
     <!-- -->\
     <nav id="id-admin-navbar-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">\
@@ -90,27 +106,22 @@
             </div>\
             <!-- -->\
             <div class="collapse navbar-collapse" id="id-admin-detailed-navbar">\
-                <!--\
                 <ul class="nav navbar-nav">\
-                    <li class="dropdown">\
-                        <a href="javascript:void(0);" class="dropdown-toggle" \
-                                data-toggle="dropdown">\
-                                后台系统<span class="caret"></span>\
+                <%\
+                for (var nav_idx in navs) {\
+                    var nav = navs[nav_idx];\
+                    var nav_id = nav["id"];\
+                    var nav_text = nav["text"];\
+                %>\
+                    <li id="<%=nav_id %>">\
+                        <a href="javascript:void(0);">\
+                            <%=nav_text %>\
                         </a>\
-                        <ul class="dropdown-menu" role="menu">\
-                            <li id="id-admin-btn-verify"><a href="javascript:void(0);">审核管理</a></li>\
-                            <li id="id-admin-btn-umis"><a href="javascript:void(0);">精品文章审核</a></li>\
-                            <li id="id-admin-btn-category"><a href="javascript:void(0);">类别管理</a></li>\
-                            <li id="id-admin-btn-topic-word"><a href="javascript:void(0);">主题词管理</a></li>\
-                            <li id="id-admin-btn-key-word"><a href="javascript:void(0);">关键词管理</a></li>\
-                            <li id="id-admin-btn-official-account"><a href="javascript:void(0);">公众账号管理</a></li>\
-                        </ul>\
                     </li>\
+                <%\
+                }\
+                %>\
                 </ul>\
-                <ul class="nav navbar-nav navbar-right">\
-                    <li id="id-admin-navbar-btn-inverse"><a href="javascript:void(0);">夜间导航栏</a></li>\
-                </ul>\
-                -->\
             </div>\
         </div>\
     </nav>\

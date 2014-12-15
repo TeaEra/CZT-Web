@@ -75,7 +75,7 @@
 
     function init() {
         /*
-        if(isApp) {
+        if(is_app) {
             $('#js_di_btn').click(function() {
                 pb('cl', $.extend({'uigs_cl': 'didi'}, statParams));
             });

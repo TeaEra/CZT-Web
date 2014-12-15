@@ -5347,7 +5347,7 @@
             var d = {
                 pluginName: "AppBanner",
                 isAutoReport: !0,
-                isAndroid: /android/i.test(navigator.userAgent.toLowerCase()),
+                is_android: /android/i.test(navigator.userAgent.toLowerCase()),
                 btnTexts: ["\u4e0b\u8f7d", "\u6253\u5f00", "\u5347\u7ea7"],
                 btnText: "\u4e0b\u8f7d\u817e\u8baf\u89c6\u9891,\u89c2\u770b\u66f4\u591a",
                 style: "none",

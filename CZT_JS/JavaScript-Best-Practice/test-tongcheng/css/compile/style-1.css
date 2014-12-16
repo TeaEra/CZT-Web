@@ -1,0 +1,79 @@
+.share-box
+{
+	background-clip: padding-box;
+	background-color: #f0f0f0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-radius: 5px 5px 5px 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin: 0 11px;
+	padding: 0 0;
+
+  width: 260px;
+  position: relative;
+  left: 50%;
+  margin-left: -130px;
+  padding-left: 0px;
+  background-color: rgb(240,240,240);
+  box-sizing: border-box;
+}
+.share-box .t
+{
+	color: #444;
+	padding: 10px 0px 3px;
+	font-size: 95%;
+}
+.share-box ul
+{
+	margin: 0 0;
+	padding: 5px 0;
+	display: table;
+	/*padding: 10px 10px 0;*/
+	table-layout: fixed;
+	width: inherit;
+}
+.share-box ul li
+{
+	display: table-cell;
+	text-align: center;
+}
+.share-box ul li a
+{
+	color: #666666;
+	display: block;
+}
+.share-box ul li a:visited
+{
+	color: #666666;
+}
+.share-box ul li a:before
+{
+	background: url(../../img/share.png) no-repeat;
+	background-size: auto 33px;
+	content: "";
+	display: block;
+	height: 33px;
+	margin: 0 0 5px;
+	width: 33px;
+}
+.share-box ul li .wb:before
+{
+	background-position: 0 0;
+}
+.share-box ul li .wx:before
+{
+	background-position: -33px 0;
+}
+.share-box ul li .pyq:before
+{
+	background-position: -66px 0;
+}
+.share-box ul li .qq:before
+{
+	background-position: -99px 0;
+}
+.share-box ul li .qzone:before
+{
+	background-position: -132px 0;
+}

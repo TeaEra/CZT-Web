@@ -11,12 +11,6 @@
     // 保存sogou-search相关函数
     window.sgs = window.sgs || {};
 
-    window.curr_info.ua = window.navigator.userAgent.toString().toLowerCase();
-    window.curr_info.is_app = window.sgs.is_app();
-    window.curr_info.is_android = window.sgs.is_android();
-    window.curr_info.is_ios = window.sgs.is_ios();
-    window.curr_info.client_app_type = window.sgs.get_client_app_type();
-
     window.sgs.get_url_params = function (paraname) {
         var str = location.href;
         var sValue = str.match(new RegExp("[?&]" + paraname + "=([^&]*)(&?)", "i"));
@@ -38,6 +32,17 @@
         var ua = window.curr_info.ua;
         return (ua.indexOf("ios") !== -1) || (ua.indexOf("iphone") !== -1)
             || (ua.indexOf("ipad") !== -1);
+    };
+
+    window.sgs.get_phone_type = function () {
+        //
+        if (window.curr_info.is_ios) {
+            return "ios";
+        }
+        if (window.curr_info.is_android) {
+            return "android";
+        }
+        return "unknown";
     };
 
     window.sgs.get_client_app_type = function () {
@@ -79,7 +84,7 @@
         obj.addEventListener("click",function(e){
             e.preventDefault();
 
-            //pb('cl', $.extend({'uigs_cl': 'download'}, statParams));
+            //window.sgs.pb('cl', $.extend({'uigs_cl': 'download'}, statParams));
 
             var clientAppType = window.curr_info.client_app_type;
 
@@ -104,29 +109,6 @@
         },false);
     }
 
-    function init() {
-        if(isApp) {
-            $('#js_di_btn').click(function() {
-                pb('cl', $.extend({'uigs_cl': 'tongcheng'}, statParams));
-            });
-            //return;
-        }
-
-        // TODO: url;
-        var url = 'http://appsearch.m.sogou.com/tongcheng/index.php?ch=' + statParams.from;
-        //var url = 'http://10.134.30.154:8081/tongcheng/scene-result.php?ch=' + statParams.from;
-        if(isIos) {
-            var schema = "sogousearch://?url="+encodeURIComponent(url);
-            var downloadUrl = 'https://itunes.apple.com/app/id891230263';
-        }else {
-            var schema = "sogousearch://extension4result?url="+encodeURIComponent(url);
-            //var downloadUrl = 'http://appsearch.m.sogou.com/apks/SogouSearch_1205.apk';
-            var downloadUrl = 'http://appsearch.m.sogou.com/apks/SogouSearch_1239.apk';
-        }
-        addCallApp($('#js_di_btn')[0], schema, downloadUrl);
-    }
-    //init();
-
     window.sgs.pb = function(type, params){
         try{
             var uniqueid = (new Date().getTime())*1000 + Math.round(Math.random()*1000),
@@ -143,5 +125,21 @@
             console.log(e);
         }
     };
+
+    window.curr_info.ua = window.navigator.userAgent.toString().toLowerCase();
+    window.curr_info.is_app = window.sgs.is_app();
+    window.curr_info.is_android = window.sgs.is_android();
+    window.curr_info.is_ios = window.sgs.is_ios();
+    window.curr_info.client_app_type = window.sgs.get_client_app_type();
+    // ios客户端下载地址
+    window.curr_info.ios_link = "https://itunes.apple.com/us/app/sou-gou-sou-suo-ji-su-sou/id891230263?mt=8";
+    // android客户端下载地址
+    window.curr_info.android_link = "http://appsearch.m.sogou.com/apks/SogouSearch_1312.apk";
+    // 客户端主页
+    window.curr_info.pc_link = "http://appsearch.m.sogou.com";
+    // ios schema
+    window.curr_info.ios_schema_prefix = "sogousearch://?url=";
+    // android schema
+    window.curr_info.android_schema_prefix = "sogousearch://extension4result?url=";
 
 })();

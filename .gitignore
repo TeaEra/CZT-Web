@@ -11,3 +11,4 @@ nohup.out
 *.pyc
 
 CZT_JS/libs/
+CZT_JS/libs-download/

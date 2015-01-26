@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<ul>
+	<li id="id_1">1</li>
+	<li id="id_2">2</li>
+	<li id="id_3">3</li>
+	<li id="id_4">4</li>
+</ul>
+
+<script>
+function func1() {
+	for (var i=1, size=4; i<=size; ++i) {
+		(function (i) {
+			document.getElementById("id_" + i).addEventListener("click", function (evt) {
+				alert(i);
+			}, false);
+		})(i);
+	}
+}
+
+function func2() {
+	for (var i=1, size=4; i<=size; ++i) {
+		document.getElementById("id_" + i).addEventListener("click", function (evt) {
+			alert(i);
+		}, false);
+	}
+}
+</script>
